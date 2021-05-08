@@ -1,11 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import PricingPageTemplate from '../components/PricingPageTemplate'
-import Layout from '../components/Layout'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import PricingPageTemplate from "../components/PricingPageTemplate";
+import Layout from "../components/Layout";
 
 const PricingPage = (props) => {
-  const { data: { markdownRemark: { frontmatter: { title, meta_title, meta_description, pricing } } } } = props
+  const {
+    data: {
+      markdownRemark: {
+        frontmatter: { title, meta_title, meta_description, pricing },
+      },
+    },
+  } = props;
 
   return (
     <Layout>
@@ -16,8 +22,8 @@ const PricingPage = (props) => {
         pricing={pricing}
       />
     </Layout>
-  )
-}
+  );
+};
 
 PricingPage.propTypes = {
   data: PropTypes.shape({
@@ -25,9 +31,9 @@ PricingPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default PricingPage
+export default PricingPage;
 
 export const pricingPageQuery = graphql`
   query PricingPage($id: String!) {
@@ -49,4 +55,4 @@ export const pricingPageQuery = graphql`
       }
     }
   }
-`
+`;

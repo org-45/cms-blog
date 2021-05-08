@@ -2,6 +2,9 @@ const config = require("./config");
 
 const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 
+//config files as major bodies
+// ${__dirname} does present dir as root?
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -39,6 +42,9 @@ module.exports = {
         name: "pages",
       },
     },
+
+    //what is sitemap?
+
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -78,6 +84,8 @@ module.exports = {
         indentedSyntax: true,
       },
     },
+
+    //what is nprogress?
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -85,6 +93,8 @@ module.exports = {
         showSpinner: false,
       },
     },
+
+    //here is a google tagmanager
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
@@ -92,6 +102,8 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+
+    //what are manifest file?
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -116,12 +128,16 @@ module.exports = {
         cache_busting_mode: "none",
       },
     },
+
+    //for offline support?
     {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/blog/*`, `/about`, `/pricing`, `/contact`, `/`],
       },
     },
+
+    //gatsby plugin feed for rss feature
     {
       resolve: "gatsby-plugin-feed",
       options: {
@@ -200,6 +216,7 @@ module.exports = {
         ],
       },
     },
+    //search ability in the site?
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
@@ -218,6 +235,7 @@ module.exports = {
         },
       },
     },
+
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
