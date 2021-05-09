@@ -21,3 +21,5 @@ module.exports = {
   cookieConsent:
     "This website uses cookies which are used to collect anonymous information to improve your browsing experience and for analytics and metrics.", // @TODO Add GDPR Cookie Consent
 };
+
+//some comments
