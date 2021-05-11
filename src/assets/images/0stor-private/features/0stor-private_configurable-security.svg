@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 450 450" style="enable-background:new 0 0 450 450;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#333333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#333333;stroke-width:2.0158;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#333333;}
+	.st3{fill:none;stroke:#333333;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#333333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="202.9" y1="332.8" x2="202.9" y2="305.4"/>
+	<circle class="st0" cx="202.9" cy="336.9" r="4.2"/>
+	<line class="st0" x1="202.9" y1="353.8" x2="202.9" y2="341"/>
+	<line class="st0" x1="225" y1="317.7" x2="225" y2="305.4"/>
+	<circle class="st0" cx="225" cy="321.8" r="4.2"/>
+	<line class="st0" x1="225" y1="353.8" x2="225" y2="326"/>
+	<line class="st0" x1="247.1" y1="327.2" x2="247.1" y2="305.4"/>
+	<circle class="st0" cx="247.1" cy="331.3" r="4.2"/>
+	<line class="st0" x1="247.1" y1="353.8" x2="247.1" y2="335.5"/>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M237.8,195.5l-22.9,0c-0.4,0-0.8-0.3-0.8-0.8l0-20.6c0-0.4,0.3-0.8,0.8-0.8l22.9,0c0.4,0,0.8,0.3,0.8,0.8
+			l0,20.6C238.5,195.2,238.2,195.5,237.8,195.5z"/>
+		<path class="st1" d="M234.4,173.4v-10.1c0-4.5-3.6-8.1-8.1-8.1s-8.1,3.6-8.1,8.1v10.1"/>
+		<path class="st2" d="M227.1,184.3v2.7c0,0.4-0.4,0.8-0.8,0.8l0,0c-0.4,0-0.8-0.4-0.8-0.8v-2.7l0,0c-0.3-0.3-0.5-0.7-0.4-1.2
+			c0.1-0.5,0.5-1,1-1c0.8-0.1,1.5,0.5,1.5,1.3C227.6,183.7,227.4,184.1,227.1,184.3L227.1,184.3z"/>
+	</g>
+	<path class="st3" d="M227.7,240.5c46.4-44.5,41.8-85.9,40.4-94c-0.2-0.8-0.8-1.5-1.6-1.7c-20.1-5.4-35-14.4-39.1-17
+		c-0.7-0.4-1.5-0.4-2.2,0c-4.1,2.6-18.9,11.6-39.1,17c-0.8,0.2-1.5,0.9-1.6,1.7c-1.4,8-6.1,49.5,40.4,94
+		C225.7,241.2,226.9,241.2,227.7,240.5z"/>
+	<path class="st4" d="M228.1,257c59.3-56.8,53.4-108.7,51.5-119c-0.2-1.1-1-1.9-2-2.2c-25.7-6.9-44.7-18.3-49.9-21.7
+		c-0.9-0.6-2-0.6-2.9,0c-5.2,3.3-24.2,14.8-49.9,21.7c-1.1,0.3-1.9,1.1-2,2.2c-1.8,10.2-7.8,62.2,51.5,119
+		C225.5,258,227.1,258,228.1,257z"/>
+</g>
+</svg>
