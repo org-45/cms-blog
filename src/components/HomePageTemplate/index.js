@@ -27,7 +27,7 @@ const HomePageTemplate = (props) => {
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
-      <div>{title}</div>
+      {/*       <div>{title}</div> */}
       <Carousel carouselData={carouselData} />
       <section className="section section--gradient">
         <div className="container">

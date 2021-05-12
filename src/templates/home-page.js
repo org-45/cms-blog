@@ -46,30 +46,36 @@ HomePage.propTypes = {
 
 export default HomePage;
 
-export const pageQuery = graphql`query IndexPage($id: String!) {
-  markdownRemark(id: {eq: $id}) {
-    frontmatter {
-      title
-      meta_title
-      meta_description
-      heading
-      description
-      offerings {
-        blurbs {
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 200, quality: 90, layout: CONSTRAINED)
+export const pageQuery = graphql`
+  query IndexPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        meta_title
+        meta_description
+        heading
+        description
+        offerings {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 800
+                  height: 600
+                  quality: 90
+                  layout: CONSTRAINED
+                )
+              }
+              publicURL
             }
-            publicURL
+            text
           }
-          text
         }
-      }
-      testimonials {
-        author
-        quote
+        testimonials {
+          author
+          quote
+        }
       }
     }
   }
-}
 `;

@@ -1,8 +1,9 @@
 ---
 templateKey: home-page
 title: 0chain Network
-heading: some heading about 0chain
-description: this is a description about 0chain products
+heading: Decentralized blockchain based storage platform backed with ZCN
+
+description: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
 offerings:
   blurbs:
     - image: /img/coffee.png
