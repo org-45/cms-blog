@@ -1,21 +1,22 @@
-import CMS from 'netlify-cms-app'
-import '../assets/sass/styles.sass'
-import HomePagePreview from './preview-templates/HomePagePreview'
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import ArticlePreview from './preview-templates/ArticlePreview'
-import PricingPagePreview from './preview-templates/PricingPagePreview'
-import ContactPagePreview from './preview-templates/ContactPagePreview'
-
+import CMS from "netlify-cms-app";
+import "../assets/sass/styles.sass";
+import HomePagePreview from "./preview-templates/HomePagePreview";
+import AboutPagePreview from "./preview-templates/AboutPagePreview";
+import ArticlePreview from "./preview-templates/ArticlePreview";
+import PricingPagePreview from "./preview-templates/PricingPagePreview";
+import ContactPagePreview from "./preview-templates/ContactPagePreview";
+import ProductPagePreview from "./preview-templates/ProductPagePreview";
 CMS.init({
   config: {
     backend: {
-      name: 'git-gateway',
+      name: "git-gateway",
     },
   },
-})
-CMS.registerPreviewStyle('/styles.css')
-CMS.registerPreviewTemplate('home', HomePagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('pricing', PricingPagePreview)
-CMS.registerPreviewTemplate('contact', ContactPagePreview)
-CMS.registerPreviewTemplate('blog', ArticlePreview)
+});
+CMS.registerPreviewStyle("/styles.css");
+CMS.registerPreviewTemplate("home", HomePagePreview);
+CMS.registerPreviewTemplate("about", AboutPagePreview);
+CMS.registerPreviewTemplate("pricing", PricingPagePreview);
+CMS.registerPreviewTemplate("contact", ContactPagePreview);
+CMS.registerPreviewTemplate("blog", ArticlePreview);
+CMS.registerPreviewTemplate("product", ProductPagePreview);

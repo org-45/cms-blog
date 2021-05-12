@@ -41,7 +41,9 @@ const Banner2 = () => {
           banner
           closable
           style={{
-            backgroundColor: "grey",
+            backgroundImage: "linear-gradient(to right,#17243b,#4c6975)",
+            border: "1px solid #05f2b7",
+            height: "45px",
           }}
         />
       )}
@@ -52,11 +54,17 @@ const Banner2 = () => {
 export default Banner2;
 
 const ActualBanner = ({ text, url }) => (
-  <div className="flex  justify-center flex-row ">
-    <div>{text}</div>
-    <div>
-      <a href={url} alt="banner hai ta" target="_blank" rel="noreferrer">
-        Click Here...
+  <div className="flex font-light opacity-50  justify-center items-center flex-row font-ubuntu-mono text-3xl ">
+    <div className="text-2xl text-white p-2">{text}</div>
+    <div className="p-3">
+      <a
+        href={url}
+        alt="banner hai ta"
+        target="_blank"
+        rel="noreferrer"
+        className="text-white"
+      >
+        <button className="underline">{"Click Here"}</button>
       </a>
     </div>
   </div>

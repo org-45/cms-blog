@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from "react";
 
-import { Menu, Dropdown } from "antd"
-import { DownOutlined } from "@ant-design/icons"
-import { Link } from "gatsby"
+import { Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
+import { Link } from "gatsby";
 
-const { SubMenu } = Menu
+const { SubMenu } = Menu;
 
 const dropDown = {
   resources: [
@@ -39,7 +39,49 @@ const dropDown = {
       ],
     },
   ],
-}
+  products: [
+    {
+      name: "0Box",
+      page: "/0Box",
+      subItems: [
+        { sName: "0Box 1", src: "/#" },
+        { sName: "0Box 2", src: "/#" },
+      ],
+    },
+    {
+      name: "0Chain-net",
+      page: "/0chain-net",
+      subItems: [
+        { sName: "0Chain-net 1", src: "/#" },
+        { sName: "PChain-net 2", src: "/#" },
+      ],
+    },
+    {
+      name: "0Stor",
+      page: "/0Stor",
+      subItems: [
+        { sName: "0Stor 1", src: "/#" },
+        { sName: "0Stor 2", src: "/#" },
+      ],
+    },
+    {
+      name: "0Wallet",
+      page: "/0Wallet",
+      subItems: [
+        { sName: "0Wallet 1", src: "/#" },
+        { sName: "0Wallet 2", src: "/#" },
+      ],
+    },
+    {
+      name: "0Lake",
+      page: "/0Lake",
+      subItems: [
+        { sName: "0Lake 1", src: "/#" },
+        { sName: "0Lake 2", src: "/#" },
+      ],
+    },
+  ],
+};
 
 //resources
 const menuResources = (
@@ -64,44 +106,50 @@ const menuResources = (
       </div>
     ))}
   </div>
-)
+);
 
 export const ResourcesDropDown = () => (
   <Dropdown overlay={menuResources} placement="bottomCenter" arrow>
-    <button onClick={e => e.preventDefault()} className="ant-dropdown-link">
+    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Resources
       <DownOutlined />
     </button>
   </Dropdown>
-)
+);
 
 //products
 const menuProducts = (
-  <Menu>
-    <Menu.ItemGroup title="Group title">
-      <Menu.Item><Link to="/0box">0box</Link></Menu.Item>
-      <Menu.Item><Link to="/0chain">0chain</Link></Menu.Item>
+  <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
+    {dropDown.products.map((item, index) => (
+      <div className="">
+        <a href={item.page} target="_blank" rel="noopener noreferrer">
+          <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
+            {item.name}{" "}
+          </div>
+        </a>
 
-    </Menu.ItemGroup>
-    {/* <SubMenu title="sub menu">
-      <Menu.Item>3rd menu item</Menu.Item>
-      <Menu.Item>4th menu item</Menu.Item>
-    </SubMenu>
-    <SubMenu title="disabled sub menu" disabled>
-      <Menu.Item>5d menu item</Menu.Item>
-      <Menu.Item>6th menu item</Menu.Item>
-    </SubMenu> */}
-  </Menu>
-)
+        <div className=" grid grid-cols-2 ">
+          {item.subItems.map((sItem, sIndex) => (
+            <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
+              <Link to={sItem.src} style={{ color: "gray" }}>
+                {sItem.sName}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+);
 
 export const ProductsDropDown = () => (
   <Dropdown overlay={menuProducts} placement="bottomCenter" arrow>
-    <button onClick={e => e.preventDefault()} className="ant-dropdown-link">
+    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Products
       <DownOutlined />
     </button>
   </Dropdown>
-)
+);
 
 //solutions
 const menuSolutions = (
@@ -119,16 +167,16 @@ const menuSolutions = (
       <Menu.Item>6th menu item</Menu.Item>
     </SubMenu>
   </Menu>
-)
+);
 
 export const SolutionsDropDown = () => (
   <Dropdown overlay={menuSolutions} placement="bottomCenter" arrow>
-    <button onClick={e => e.preventDefault()} className="ant-dropdown-link">
+    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Solutions
       <DownOutlined />
     </button>
   </Dropdown>
-)
+);
 
 //community
 const menuCommunity = (
@@ -146,13 +194,13 @@ const menuCommunity = (
       <Menu.Item>6th menu item</Menu.Item>
     </SubMenu>
   </Menu>
-)
+);
 
 export const CommunityDropDown = () => (
   <Dropdown overlay={menuCommunity} placement="bottomCenter" arrow>
-    <button onClick={e => e.preventDefault()} className="ant-dropdown-link">
+    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Community
       <DownOutlined />
     </button>
   </Dropdown>
-)
+);

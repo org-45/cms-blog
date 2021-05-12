@@ -140,6 +140,7 @@ collections:
               name: "meta_description",
               widget: "text",
             }
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -161,6 +162,42 @@ collections:
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
 
+  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<PRODUCTS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "products"
+    label: "Products"
+    folder: "src/pages/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+      - { label: "Cover", name: "cover", widget: "image" }
+      - {
+          label: "Product Youtube Link",
+          name: "product_yt_url",
+          widget: "string",
+        }
+      - {
+          label: "Product Youtube Thumbnail",
+          name: "product_yt_thumbnail",
+          widget: "image",
+        }
+      - {
+          label: "Product Description",
+          name: "product_description",
+          widget: "string",
+        }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
   # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   - name: "banner"

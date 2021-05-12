@@ -25,7 +25,14 @@ export default function Nanbar() {
             </div>
 
             <div className="hover:text-yellow-500">
-              <Link to="/blog">Blog</Link>
+              <a
+                href="/blog"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontStyle: "none" }}
+              >
+                Blog
+              </a>
             </div>
             <div className="hover:text-yellow-500">
               <ProductsDropDown />
