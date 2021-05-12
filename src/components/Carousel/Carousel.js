@@ -15,10 +15,10 @@ const Win = ({ carouselData }) => {
       style={{ height: "80vh" }}
     >
       <div className="bg-gray-900">
-        <div className="p-20 pl-80 flex justify-center text-7xl">
+        <div className="p-20 pl-80 pr-80 flex justify-center text-7xl">
           {carouselData.frontCarousel.heading}
         </div>
-        <div className="p-10 pl-80 flex justify-center text-2xl">
+        <div className="p-10 pl-80 pr-80 flex justify-center text-2xl">
           {carouselData.frontCarousel.description}
         </div>
         <div className="p-10 flex justify-center text-2xl">
@@ -39,7 +39,7 @@ export default Win;
 const CustomSlide = ({ cData }) => {
   let imageData = getImage(cData.image);
   return (
-    <div className="bg-gray-200 grid grid-cols-2" style={{ height: "80vh" }}>
+    <div className="bg-gray-900 grid grid-cols-2" style={{ height: "80vh" }}>
       <div className="bg-gray-900 flex flex-col justify-center items-center ">
         <div className="text-6xl p-20"> {cData.text}</div>
         <div className="p-20 flex justify-center text-2xl">
@@ -48,7 +48,7 @@ const CustomSlide = ({ cData }) => {
           </button>
         </div>
       </div>
-      <div className="bg-gray-900 flex justify-center items-center p-0">
+      <div className="bg-gray-900 flex justify-center items-center">
         <GatsbyImage image={imageData} alt={"carousel alt"} />
       </div>
     </div>
