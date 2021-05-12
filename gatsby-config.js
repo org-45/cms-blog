@@ -263,5 +263,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-antd`,
   ],
 };

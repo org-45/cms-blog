@@ -160,3 +160,21 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
+
+  # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "banner"
+    label: "Banner Data Items"
+    files:
+      - file: "src/pages/banner/index.md"
+        label: "Banner Items"
+        name: "banner"
+        fields:
+          - {
+              label: "Template key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "banner-component",
+            }
+          - { label: "Banner Info", name: "bannerInfo", widget: string }
+          - { label: "Banner Url", name: "bannerUrl", widget: string }

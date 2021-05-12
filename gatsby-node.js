@@ -40,42 +40,40 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  return graphql(`
-    {
-      allMarkdownRemark(
-        limit: 1000
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            id
-            fields {
-              slug
+  return graphql(`{
+  allMarkdownRemark(
+    limit: 1000
+    sort: {order: DESC, fields: [frontmatter___date]}
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          cover {
+            childImageSharp {
+              gatsbyImageData(
+                width: 500
+                quality: 50
+                placeholder: BLURRED
+                layout: CONSTRAINED
+              )
             }
-            frontmatter {
-              title
-              cover {
-                childImageSharp {
-                  fluid(maxWidth: 500, quality: 50) {
-                    src
-                    srcSet
-                    aspectRatio
-                    sizes
-                    base64
-                  }
-                }
-                publicURL
-              }
-              tags
-              templateKey
-              date(formatString: "MMMM DD, YYYY")
-            }
+            publicURL
           }
+          tags
+          templateKey
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
-  `).then((result) => {
+  }
+}
+`).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
@@ -102,17 +100,19 @@ exports.createPages = ({ actions, graphql }) => {
     });
     postsAndPages.forEach((edge) => {
       const id = edge.node.id;
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      });
+      if (edge.node.fields.slug !== "banner-component") {
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          // additional data can be passed via context
+          context: {
+            id,
+          },
+        });
+      }
     });
 
     // Tag pages:

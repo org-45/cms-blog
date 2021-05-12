@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import Offerings from "../Offerings";
 import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
+import Carousel from "../Carousel";
 
 const HomePageTemplate = (props) => {
   const {
@@ -15,7 +16,10 @@ const HomePageTemplate = (props) => {
     testimonials,
   } = props;
 
-  console.log(offerings, "this is our offerings");
+  const carouselData = {};
+  console.log(offerings.blurbs, "this is our offerings");
+  carouselData.offerings = offerings.blurbs;
+  carouselData.frontCarousel = { heading, description };
 
   return (
     <div>
@@ -23,19 +27,8 @@ const HomePageTemplate = (props) => {
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
-      <section className="hero is-primary is-bold is-medium">
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="section">
-                  <h1 className="title">{title}</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div>{title}</div>
+      <Carousel carouselData={carouselData} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">

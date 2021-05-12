@@ -1,9 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import '../../assets/sass/styles.sass'
-import config from '../../../config'
-import NavBar from '../NavBar'
-import Footer from '../Footer'
+import React from "react";
+import Helmet from "react-helmet";
+import "../../assets/sass/styles.sass";
+import config from "../../../config";
+import Banner2 from "../Banner2";
+import NavBar2 from "../NavBar2";
+import Footer from "../Footer";
 
 const Layout = (props) => {
   return (
@@ -11,7 +12,6 @@ const Layout = (props) => {
       <Helmet
         htmlAttributes={{
           lang: `en`,
-          class: `has-navbar-fixed-top`,
         }}
         title={config.siteTitle}
         meta={[
@@ -57,11 +57,12 @@ const Layout = (props) => {
           },
         ]}
       />
-      <NavBar />
+      <Banner2 />
+      <NavBar2 />
       <>{props.children}</>
       <Footer copyright={config.copyright} />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
