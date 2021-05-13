@@ -37,5 +37,5 @@ product_description: product Contrary to popular belief, Lorem Ipsum is not
   popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
   dolor sit amet..", comes from a line in section 1.10.32.
 meta_title: title
-meta_description: desc meta 0Wallet
+meta_description: Sudeep Bhandari
 ---

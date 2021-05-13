@@ -5,6 +5,8 @@ import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
 
+import someGif from "../../../src/assets/images/source.gif";
+
 const HomePageTemplate = (props) => {
   const {
     title,
@@ -46,6 +48,8 @@ const HomePageTemplate = (props) => {
                     Testimonials
                   </h2>
                   <Testimonials testimonials={testimonials} />
+
+                  <img src={someGif} alt="gif testing" />
                 </div>
               </div>
             </div>

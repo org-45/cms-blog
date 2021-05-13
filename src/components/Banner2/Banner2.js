@@ -54,8 +54,8 @@ const Banner2 = () => {
 export default Banner2;
 
 const ActualBanner = ({ text, url }) => (
-  <div className="flex font-light opacity-50  justify-center items-center flex-row font-ubuntu-mono text-3xl ">
-    <div className="text-2xl text-white p-2">{text}</div>
+  <div className="flex font-light opacity-50  justify-center items-center flex-row font-ubuntu-mono text-2xl ">
+    <div className="text-xl text-white p-2">{text}</div>
     <div className="p-3">
       <a
         href={url}
