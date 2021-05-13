@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 local_backend: true
-site_url: https://happy-yonath-1264b8.netlify.app
-display_url: https://happy-yonath-1264b8.netlify.app
+# site_url: https://happy-yonath-1264b8.netlify.app
+# display_url: https://happy-yonath-1264b8.netlify.app
 
 publish_mode: editorial_workflow
 media_folder: static/img
@@ -168,7 +168,6 @@ collections:
     label: "Products"
     folder: "src/pages/products"
     create: true
-    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -177,13 +176,12 @@ collections:
           default: "product-page",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
 
       - { label: "Cover", name: "cover", widget: "image" }
       - {
           label: "Product Youtube Link",
-          name: "product_yt_url",
+          name: "product_yt_link",
           widget: "string",
         }
       - {

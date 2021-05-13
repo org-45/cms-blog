@@ -153,21 +153,21 @@ exports.createPages = ({ actions, graphql }) => {
         },
       });
     });
-
-    // Make product pages
-    // products.forEach((product) => {
-    //   const productPath = `/products/${_.kebabCase(product)}/`;
-
-    //   createPage({
-    //     path: productPath,
-    //     component: path.resolve(`src/templates/product-page.js`),
-    //     context: {
-    //       tag,
-    //     },
-    //   });
-    // });
   });
 };
+
+// Make product pages
+// products.forEach((product) => {
+//   const productPath = `/products/${_.kebabCase(product)}/`;
+
+//   createPage({
+//     path: productPath,
+//     component: path.resolve(`src/templates/product-page.js`),
+//     context: {
+//       tag,
+//     },
+//   });
+// });
 
 //here we can make updates to products pages from the field values of the cms
 // we do need to keep the md section intact based on the md section our

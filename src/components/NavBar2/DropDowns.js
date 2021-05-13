@@ -42,7 +42,7 @@ const dropDown = {
   products: [
     {
       name: "0Box",
-      page: "/0Box",
+      page: "/products/0box",
       subItems: [
         { sName: "0Box 1", src: "/#" },
         { sName: "0Box 2", src: "/#" },
@@ -50,7 +50,7 @@ const dropDown = {
     },
     {
       name: "0Chain-net",
-      page: "/0chain-net",
+      page: "/products/0chain-net",
       subItems: [
         { sName: "0Chain-net 1", src: "/#" },
         { sName: "PChain-net 2", src: "/#" },
@@ -74,7 +74,7 @@ const dropDown = {
     },
     {
       name: "0Lake",
-      page: "/0Lake",
+      page: "/products/0lake",
       subItems: [
         { sName: "0Lake 1", src: "/#" },
         { sName: "0Lake 2", src: "/#" },
