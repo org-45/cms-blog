@@ -4,15 +4,28 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Carousel } from "antd";
 
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  accessibility: true,
+};
+
 const Win = ({ carouselData }) => {
   console.log(carouselData, "this is our carousel data");
 
   return (
     <Carousel
       autoplay
-      dots={true}
+      arrows={true}
+      dots={{
+        color: "red",
+      }}
       className="bg-gray-900 text-white"
       style={{ height: "80vh" }}
+      {...settings}
     >
       <div className="bg-gray-900">
         <div className="p-20 pl-80 pr-80 flex justify-center text-7xl">
