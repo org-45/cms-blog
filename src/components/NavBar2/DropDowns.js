@@ -10,7 +10,7 @@ const dropDown = {
   resources: [
     {
       name: "WhitePapers",
-      page: "/resource-whitepaper",
+      page: "/resources/whitepaper",
       subItems: [
         { sName: "Protocol 1", src: "/#" },
         { sName: "Protocol 2", src: "/#" },
@@ -20,7 +20,7 @@ const dropDown = {
     },
     {
       name: "Documentation",
-      page: "/resource-documentation",
+      page: "/resources/documentation",
       subItems: [
         { sName: "ProtocolD 1", src: "/#" },
         { sName: "ProtocolD 2", src: "/#" },
@@ -30,7 +30,7 @@ const dropDown = {
     },
     {
       name: "Github",
-      page: "/resource-github",
+      page: "/resources/github",
       subItems: [
         { sName: "ProtocolG 1", src: "/#" },
         { sName: "ProtocolG 2", src: "/#" },
@@ -58,7 +58,7 @@ const dropDown = {
     },
     {
       name: "0Stor",
-      page: "/0Stor",
+      page: "/products/0stor",
       subItems: [
         { sName: "0Stor 1", src: "/#" },
         { sName: "0Stor 2", src: "/#" },
@@ -66,7 +66,7 @@ const dropDown = {
     },
     {
       name: "0Wallet",
-      page: "/0Wallet",
+      page: "/products/0wallet",
       subItems: [
         { sName: "0Wallet 1", src: "/#" },
         { sName: "0Wallet 2", src: "/#" },
@@ -83,7 +83,7 @@ const dropDown = {
   ],
 };
 
-//resources
+//RESOURCES
 const menuResources = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.resources.map((item, index) => (
@@ -117,7 +117,7 @@ export const ResourcesDropDown = () => (
   </Dropdown>
 );
 
-//products
+//PRODUCTSS
 const menuProducts = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.products.map((item, index) => (

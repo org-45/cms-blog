@@ -6,6 +6,8 @@ import ArticlePreview from "./preview-templates/ArticlePreview";
 import PricingPagePreview from "./preview-templates/PricingPagePreview";
 import ContactPagePreview from "./preview-templates/ContactPagePreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
+import ResourcePagePreview from "./preview-templates/ResourcePagePreview";
+
 CMS.init({
   config: {
     backend: {
@@ -20,3 +22,4 @@ CMS.registerPreviewTemplate("pricing", PricingPagePreview);
 CMS.registerPreviewTemplate("contact", ContactPagePreview);
 CMS.registerPreviewTemplate("blog", ArticlePreview);
 CMS.registerPreviewTemplate("product", ProductPagePreview);
+CMS.registerPreviewTemplate("resource", ResourcePagePreview);

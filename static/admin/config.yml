@@ -196,6 +196,41 @@ collections:
         }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
+
+        #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<RESOURCES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "resources"
+    label: "Resources"
+    folder: "src/pages/resources"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "resource-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+      - { label: "Cover", name: "cover", widget: "image" }
+      - {
+          label: "Resource Youtube Link",
+          name: "resource_yt_link",
+          widget: "string",
+        }
+      - {
+          label: "Resource Youtube Thumbnail",
+          name: "resource_yt_thumbnail",
+          widget: "image",
+        }
+      - {
+          label: "Respurce Description",
+          name: "resource_description",
+          widget: "string",
+        }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
   # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   - name: "banner"

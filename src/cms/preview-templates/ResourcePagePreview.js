@@ -1,33 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ProductPageTemplate from "../../components/ProductPageTemplate";
+import ResourcePageTemplate from "../../components/ResourcePageTemplate";
 
-const ProductPreview = ({ entry, widgetFor }) => {
+const ResourcePreview = ({ entry, widgetFor }) => {
   return (
     <div className="container content">
       <div className="columns">
         <div className="column is-10 is-offset-1">
-          <ProductPageTemplate
+          <ResourcePageTemplate
             cover={entry.getIn(["data", "cover"])}
             date={entry.getIn(["data", "date"])}
             meta_title={entry.getIn(["data", "meta_title"])}
             meta_desc={entry.getIn(["data", "meta_description"])}
             title={entry.getIn(["data", "title"])}
-            product={{
-              product_description: entry.getIn([
+            resource={{
+              resource_description: entry.getIn([
                 "data",
-                "product",
-                "product_description",
+                "resource",
+                "resource_description",
               ]),
-              product_yt_thumbnail: entry.getIn([
+              resource_yt_thumbnail: entry.getIn([
                 "data",
-                "product",
-                "product_yt_thumbnail",
+                "resource",
+                "resource_yt_thumbnail",
               ]),
-              product_yt_link: entry.getIn([
+              resource_yt_link: entry.getIn([
                 "data",
-                "product",
-                "product_yt_link",
+                "resource",
+                "resource_yt_link",
               ]),
             }}
           />
@@ -37,11 +37,11 @@ const ProductPreview = ({ entry, widgetFor }) => {
   );
 };
 
-ProductPreview.propTypes = {
+ResourcePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 };
 
-export default ProductPreview;
+export default ResourcePreview;
