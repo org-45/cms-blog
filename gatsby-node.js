@@ -6,7 +6,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
 
-  console.log(node, "here is our node");
+  // console.log(node, "here is our node");
 
   if (node.internal.type === `MarkdownRemark`) {
     const fileNode = getNode(node.parent);
