@@ -71,7 +71,7 @@ const dropDown = {
           src: "https://documenter.getpostman.com/view/5505940/TzJpgysM",
         },
         { sName: "Documentation 3", src: "http://docs.0chain.net/" },
-        { sName: "See More...", src: "/recources/documentation" },
+        { sName: "See More...", src: "/resources/documentation" },
       ],
     },
     {
