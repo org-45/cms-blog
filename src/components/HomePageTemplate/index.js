@@ -5,7 +5,9 @@ import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
 
-// import someGif from "../../../src/assets/images/source.gif";
+import Partners from "../Partners";
+
+// videos and pngs
 import gitPng from "../../assets/images/gh-mobile.png";
 import gitVideo from "../../assets/videos/gh-mobile.h264.mp4";
 
@@ -22,12 +24,15 @@ const HomePageTemplate = (props) => {
     meta_title,
     meta_description,
     testimonials,
+    partners_logo_array,
   } = props;
 
   const carouselData = {};
   console.log(offerings.blurbs, "this is our offerings");
   carouselData.offerings = offerings.blurbs;
   carouselData.frontCarousel = { heading, description };
+
+  const partnersLogoArray = [...partners_logo_array];
 
   return (
     <div>
@@ -37,71 +42,46 @@ const HomePageTemplate = (props) => {
       </Helmet>
       {/*       <div>{title}</div> */}
       <Carousel carouselData={carouselData} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div>
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                  <Offerings gridItems={offerings.blurbs} />
-                  <h2 className="has-text-weight-semibold is-size-2">
-                    Testimonials
-                  </h2>
-                  <Testimonials testimonials={testimonials} />
+      <Partners partnersData={partnersLogoArray} />
+      <video
+        autoPlay
+        loop
+        muted
+        poster={gitPng}
+        src={gitVideo}
+        width={400}
+        height={800}
+        type="video/mp4"
+      ></video>
 
-                  {/* <img src={someGif} alt="gif testing" /> */}
+      <div>
+        <video
+          autoPlay
+          loop
+          muted
+          src={zchainLooper}
+          className="h-screen w-screen"
+          type="video/mp4"
+        ></video>
+      </div>
 
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    poster={gitPng}
-                    src={gitVideo}
-                    width={400}
-                    height={800}
-                    type="video/mp4"
-                  ></video>
-
-                  <div>
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      src={zchainLooper}
-                      className="h-screen w-screen"
-                      type="video/mp4"
-                    ></video>
-                  </div>
-
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    src={elephantsVid}
-                    width={800}
-                    height={600}
-                    type="video/webm"
-                  ></video>
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    src={sampleVideo}
-                    className="h-screen w-screen"
-                    type="video/mp4"
-                  ></video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <video
+        autoPlay
+        loop
+        muted
+        src={elephantsVid}
+        width={800}
+        height={600}
+        type="video/webm"
+      ></video>
+      <video
+        autoPlay
+        loop
+        muted
+        src={sampleVideo}
+        className="h-screen w-screen"
+        type="video/mp4"
+      ></video>
     </div>
   );
 };
@@ -115,6 +95,7 @@ HomePageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
+  partners_logo_array: PropTypes.array,
 };
 
 export default HomePageTemplate;

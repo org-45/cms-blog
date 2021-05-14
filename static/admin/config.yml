@@ -54,6 +54,14 @@ collections:
                   { label: Author, name: author, widget: string },
                 ],
             }
+          - {
+              label: Partners,
+              name: partners_logo_array,
+              allow_add: true,
+              widget: list,
+              fields:
+                [{ label: "Partner Logo", name: partner_logo, widget: image }],
+            }
           - { label: "Meta Title", name: "meta_title", widget: "string" }
           - {
               label: "Meta Description",

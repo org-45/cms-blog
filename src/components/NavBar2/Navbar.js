@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import {
   ResourcesDropDown,
   ProductsDropDown,
-  SolutionsDropDown,
+  // SolutionsDropDown,
   CommunityDropDown,
 } from "./DropDowns";
 
@@ -37,9 +37,9 @@ export default function Nanbar() {
             <div className="hover:text-yellow-500">
               <ProductsDropDown />
             </div>
-            <div className="hover:text-yellow-500">
+            {/* <div className="hover:text-yellow-500">
               <SolutionsDropDown />
-            </div>
+            </div> */}
             <div className="hover:text-yellow-500">
               <CommunityDropDown />
             </div>
