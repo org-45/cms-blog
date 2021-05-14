@@ -11,7 +11,7 @@ import gitVideo from "../../assets/videos/gh-mobile.h264.mp4";
 
 import zchainLooper from "../../assets/videos/0chain_looper.mp4";
 import elephantsVid from "../../assets/videos/elephants-dream.webm";
-import sampleVideo from "../../assets/videos/sample.mp4";
+import sampleVideo from "../../assets/videos/github-2.mp4";
 
 const HomePageTemplate = (props) => {
   const {
@@ -65,6 +65,7 @@ const HomePageTemplate = (props) => {
                     src={gitVideo}
                     width={400}
                     height={800}
+                    type="video/mp4"
                   ></video>
 
                   <div>
@@ -74,6 +75,7 @@ const HomePageTemplate = (props) => {
                       muted
                       src={zchainLooper}
                       className="h-screen w-screen"
+                      type="video/mp4"
                     ></video>
                   </div>
 
@@ -84,14 +86,15 @@ const HomePageTemplate = (props) => {
                     src={elephantsVid}
                     width={800}
                     height={600}
+                    type="video/webm"
                   ></video>
                   <video
                     autoPlay
                     loop
                     muted
                     src={sampleVideo}
-                    width={800}
-                    height={600}
+                    className="h-screen w-screen"
+                    type="video/mp4"
                   ></video>
                 </div>
               </div>
