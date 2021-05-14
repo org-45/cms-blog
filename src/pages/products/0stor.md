@@ -3,7 +3,7 @@ templateKey: product-page
 title: 0Stor
 date: 2021-05-13T07:24:26.502Z
 cover: /img/coffee-gear.png
-product_yt_link: google.com
+product_yt_link: <iframe width="400" height="300" src="https://www.youtube.com/embed/GvhMEC4VN_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 product_yt_thumbnail: /img/coffee.png
 product_description: Contrary to popular beContrary to popular belief, Lorem
   Ipsum is not simply random text. It has roots in a piece of classical Latin

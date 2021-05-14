@@ -37,18 +37,7 @@ const ProductPageTemplate = (props) => {
 
       <div>
         <div>{prod.description}</div>
-        <div>
-          <a
-            href={prod.product_yt_link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GatsbyImage
-              image={getImage(prod.product_yt_thumbnail)}
-              alt={"0chain products"}
-            />
-          </a>
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: prod.product_yt_link }} />
       </div>
     </div>
   );
