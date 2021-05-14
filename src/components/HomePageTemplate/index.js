@@ -5,7 +5,13 @@ import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
 
-import someGif from "../../../src/assets/images/source.gif";
+// import someGif from "../../../src/assets/images/source.gif";
+import gitPng from "../../assets/images/gh-mobile.png";
+import gitVideo from "../../assets/videos/gh-mobile.h264.mp4";
+
+import zchainLooper from "../../assets/videos/0chain_looper.mp4";
+import elephantsVid from "../../assets/videos/elephants-dream.webm";
+import sampleVideo from "../../assets/videos/sample.mp4";
 
 const HomePageTemplate = (props) => {
   const {
@@ -49,7 +55,44 @@ const HomePageTemplate = (props) => {
                   </h2>
                   <Testimonials testimonials={testimonials} />
 
-                  <img src={someGif} alt="gif testing" />
+                  {/* <img src={someGif} alt="gif testing" /> */}
+
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    poster={gitPng}
+                    src={gitVideo}
+                    width={400}
+                    height={800}
+                  ></video>
+
+                  <div>
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      src={zchainLooper}
+                      className="h-screen w-screen"
+                    ></video>
+                  </div>
+
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    src={elephantsVid}
+                    width={800}
+                    height={600}
+                  ></video>
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    src={sampleVideo}
+                    width={800}
+                    height={600}
+                  ></video>
                 </div>
               </div>
             </div>
