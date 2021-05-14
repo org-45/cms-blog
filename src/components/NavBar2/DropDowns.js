@@ -212,7 +212,7 @@ const dropDown = {
     },
     {
       name: "Forums",
-      page: "/community/forums",
+      page: "/community/forum",
       subItems: [
         { sName: "0Lake 1", src: "/#" },
         { sName: "0Lake 2", src: "/#" },
@@ -406,7 +406,7 @@ const menuCommunity = (
 );
 
 export const CommunityDropDown = () => (
-  <Dropdown overlay={menuSolutions} placement="bottomCenter" arrow>
+  <Dropdown overlay={menuCommunity} placement="bottomCenter" arrow>
     <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Community
       <DownOutlined />

@@ -115,7 +115,8 @@ exports.createPages = ({ actions, graphql }) => {
       if (
         edge.node.fields.slug !== "banner-component" &&
         edge.node.frontmatter.templateKey !== "product-page" &&
-        edge.node.frontmatter.templateKey !== "resource-page"
+        edge.node.frontmatter.templateKey !== "resource-page" &&
+        edge.node.frontmatter.templateKey !== "community-page"
       ) {
         createPage({
           path: edge.node.fields.slug,

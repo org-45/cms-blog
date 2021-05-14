@@ -231,6 +231,42 @@ collections:
         }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
+
+        #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<COMMUNITY>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "community"
+    label: "Communities"
+    folder: "src/pages/community"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "community-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+      - { label: "Cover", name: "cover", widget: "image" }
+      - {
+          label: "Community Youtube iFrame",
+          name: "community_yt_link",
+          widget: "string",
+        }
+      - {
+          label: "Community Youtube Thumbnail",
+          name: "community_yt_thumbnail",
+          widget: "image",
+        }
+      - {
+          label: "Community Description",
+          name: "community_description",
+          widget: "string",
+        }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
+
   # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   - name: "banner"
