@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
     fontFamily: {},
     height: {
+      "5vh": "5vh",
       "10vh": "10vh",
+      "15vh": "15vh",
       "20vh": "20vh",
       "30vh": "30vh",
       "40vh": "40vh",
@@ -14,6 +16,7 @@ module.exports = {
       "70vh": "70vh",
       "80vh": "80vh",
       "90vh": "90vh",
+      "95vh": "95vh",
       "100vh": "100vh",
     },
     weight: {
