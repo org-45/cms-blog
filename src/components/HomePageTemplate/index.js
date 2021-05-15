@@ -8,6 +8,7 @@ import Carousel from "../Carousel";
 import Partners from "../Partners";
 import ProductSlide from "../ProductSlide";
 import Roadmap from "../Roadmap";
+import LandingBlogs from "../LandingBlogs";
 
 const HomePageTemplate = (props) => {
   const {
@@ -38,6 +39,7 @@ const HomePageTemplate = (props) => {
       <Partners partnersData={partnersLogoArray} />
       <ProductSlide />
       <Roadmap />
+      <LandingBlogs />
     </div>
   );
 };
