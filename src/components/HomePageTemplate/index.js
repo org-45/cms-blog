@@ -5,7 +5,10 @@ import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
 
-import someGif from "../../../src/assets/images/source.gif";
+import Partners from "../Partners";
+import ProductSlide from "../ProductSlide";
+import Roadmap from "../Roadmap";
+import LandingBlogs from "../LandingBlogs";
 
 const HomePageTemplate = (props) => {
   const {
@@ -16,6 +19,7 @@ const HomePageTemplate = (props) => {
     meta_title,
     meta_description,
     testimonials,
+    partners_logo_array,
   } = props;
 
   const carouselData = {};
@@ -23,39 +27,19 @@ const HomePageTemplate = (props) => {
   carouselData.offerings = offerings.blurbs;
   carouselData.frontCarousel = { heading, description };
 
+  const partnersLogoArray = [...partners_logo_array];
+
   return (
     <div>
       <Helmet>
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
-      {/*       <div>{title}</div> */}
       <Carousel carouselData={carouselData} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div>
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                  <Offerings gridItems={offerings.blurbs} />
-                  <h2 className="has-text-weight-semibold is-size-2">
-                    Testimonials
-                  </h2>
-                  <Testimonials testimonials={testimonials} />
-
-                  <img src={someGif} alt="gif testing" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Partners partnersData={partnersLogoArray} />
+      <ProductSlide />
+      <Roadmap />
+      <LandingBlogs />
     </div>
   );
 };
@@ -69,6 +53,7 @@ HomePageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
+  partners_logo_array: PropTypes.array,
 };
 
 export default HomePageTemplate;

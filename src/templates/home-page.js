@@ -16,6 +16,7 @@ const HomePage = (props) => {
           description,
           offerings,
           testimonials,
+          partners_logo_array,
         },
       },
     },
@@ -31,6 +32,7 @@ const HomePage = (props) => {
         description={description}
         offerings={offerings}
         testimonials={testimonials}
+        partners_logo_array={partners_logo_array}
       />
     </Layout>
   );
@@ -74,6 +76,18 @@ export const pageQuery = graphql`
         testimonials {
           author
           quote
+        }
+        partners_logo_array {
+          partner_logo {
+            childrenImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED
+                quality: 90
+                aspectRatio: 1
+                height: 70
+              )
+            }
+          }
         }
       }
     }

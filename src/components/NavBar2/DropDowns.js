@@ -71,7 +71,7 @@ const dropDown = {
           src: "https://documenter.getpostman.com/view/5505940/TzJpgysM",
         },
         { sName: "Documentation 3", src: "http://docs.0chain.net/" },
-        { sName: "See More...", src: "/recources/documentation" },
+        { sName: "See More...", src: "/resources/documentation" },
       ],
     },
     {
@@ -129,6 +129,90 @@ const dropDown = {
     {
       name: "0Lake",
       page: "/products/0lake",
+      subItems: [
+        { sName: "0Lake 1", src: "/#" },
+        { sName: "0Lake 2", src: "/#" },
+      ],
+    },
+  ],
+  solutions: [
+    {
+      name: "Blockchain",
+      page: "/solutions/blockchain",
+      subItems: [
+        { sName: "0Box 1", src: "/#" },
+        { sName: "0Box 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Social Media",
+      page: "/solutions/social-media",
+      subItems: [
+        { sName: "0Chain-net 1", src: "/#" },
+        { sName: "PChain-net 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Identity",
+      page: "/solutions/identity",
+      subItems: [
+        { sName: "0Stor 1", src: "/#" },
+        { sName: "0Stor 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Health Care",
+      page: "/solutions/health-care",
+      subItems: [
+        { sName: "0Wallet 1", src: "/#" },
+        { sName: "0Wallet 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Supply Chain",
+      page: "/solutions/supply-chain",
+      subItems: [
+        { sName: "0Lake 1", src: "/#" },
+        { sName: "0Lake 2", src: "/#" },
+      ],
+    },
+  ],
+  community: [
+    {
+      name: "Be a miner",
+      page: "/community/be-a-miner",
+      subItems: [
+        { sName: "0Box 1", src: "/#" },
+        { sName: "0Box 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Developer Programs",
+      page: "/community/developer-programs",
+      subItems: [
+        { sName: "0Chain-net 1", src: "/#" },
+        { sName: "PChain-net 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Bug Bounty",
+      page: "/community/bug-bounty",
+      subItems: [
+        { sName: "0Stor 1", src: "/#" },
+        { sName: "0Stor 2", src: "/#" },
+      ],
+    },
+    {
+      name: "ZCN",
+      page: "/community/zcn",
+      subItems: [
+        { sName: "0Wallet 1", src: "/#" },
+        { sName: "0Wallet 2", src: "/#" },
+      ],
+    },
+    {
+      name: "Forums",
+      page: "/community/forum",
       subItems: [
         { sName: "0Lake 1", src: "/#" },
         { sName: "0Lake 2", src: "/#" },
@@ -221,9 +305,16 @@ const menuProducts = (
         <div className=" grid grid-cols-2 ">
           {item.subItems.map((sItem, sIndex) => (
             <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
-              <Link to={sItem.src} style={{ color: "gray" }}>
-                {sItem.sName}
-              </Link>
+              <a
+                href={sItem.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "gray" }}
+              >
+                <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
+                  {sItem.sName}
+                </div>
+              </a>
             </div>
           ))}
         </div>
@@ -243,20 +334,34 @@ export const ProductsDropDown = () => (
 
 //solutions
 const menuSolutions = (
-  <Menu>
-    <Menu.ItemGroup title="Group title">
-      <Menu.Item>1st menu item</Menu.Item>
-      <Menu.Item>2nd menu item</Menu.Item>
-    </Menu.ItemGroup>
-    <SubMenu title="sub menu">
-      <Menu.Item>3rd menu item</Menu.Item>
-      <Menu.Item>4th menu item</Menu.Item>
-    </SubMenu>
-    <SubMenu title="disabled sub menu" disabled>
-      <Menu.Item>5d menu item</Menu.Item>
-      <Menu.Item>6th menu item</Menu.Item>
-    </SubMenu>
-  </Menu>
+  <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
+    {dropDown.solutions.map((item, index) => (
+      <div className="">
+        <a href={item.page} target="_blank" rel="noopener noreferrer">
+          <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
+            {item.name}{" "}
+          </div>
+        </a>
+
+        <div className=" grid grid-cols-2 ">
+          {item.subItems.map((sItem, sIndex) => (
+            <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
+              <a
+                href={sItem.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "gray" }}
+              >
+                <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
+                  {sItem.sName}
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
 );
 
 export const SolutionsDropDown = () => (
@@ -270,20 +375,34 @@ export const SolutionsDropDown = () => (
 
 //community
 const menuCommunity = (
-  <Menu>
-    <Menu.ItemGroup title="Group title">
-      <Menu.Item>1st menu item</Menu.Item>
-      <Menu.Item>2nd menu item</Menu.Item>
-    </Menu.ItemGroup>
-    <SubMenu title="sub menu">
-      <Menu.Item>3rd menu item</Menu.Item>
-      <Menu.Item>4th menu item</Menu.Item>
-    </SubMenu>
-    <SubMenu title="disabled sub menu" disabled>
-      <Menu.Item>5d menu item</Menu.Item>
-      <Menu.Item>6th menu item</Menu.Item>
-    </SubMenu>
-  </Menu>
+  <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
+    {dropDown.community.map((item, index) => (
+      <div className="">
+        <a href={item.page} target="_blank" rel="noopener noreferrer">
+          <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
+            {item.name}{" "}
+          </div>
+        </a>
+
+        <div className=" grid grid-cols-2 ">
+          {item.subItems.map((sItem, sIndex) => (
+            <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
+              <a
+                href={sItem.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "gray" }}
+              >
+                <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
+                  {sItem.sName}
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
 );
 
 export const CommunityDropDown = () => (
