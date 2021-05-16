@@ -3,7 +3,7 @@ templateKey: product-page
 title: 0Wallet
 date: 2021-05-13T07:21:16.408Z
 cover: /img/products-grid3.jpg
-product_yt_link: https://youtube.com/#
+product_yt_link: <iframe width="400" height="300" src="https://www.youtube.com/embed/GvhMEC4VN_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 product_yt_thumbnail: /img/meeting-space.png
 product_description: product Contrary to popular belief, Lorem Ipsum is not
   simply random text. It has roots in a piece of classical Latin literature from

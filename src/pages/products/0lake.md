@@ -3,7 +3,7 @@ templateKey: product-page
 title: 0Lake
 date: 2021-05-13T06:59:38.030Z
 cover: /img/coffee.png
-product_yt_link: https://youtube.com/chauchausoup
+product_yt_link: <iframe width="400" height="300" src="https://www.youtube.com/embed/GvhMEC4VN_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 product_yt_thumbnail: /img/meeting-space.png
 product_description: " product in long run.0Lake is a product of nice choice. We
   need to make such product in long run.0Lake is a product of nice choice. We

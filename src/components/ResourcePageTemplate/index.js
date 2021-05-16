@@ -30,9 +30,9 @@ const ResourcePageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
 
-      <div className="section">
-        <h1 className="title">{reso.heading}</h1>
-        <p className="is-size-5">{meta_description}</p>
+      <div className="bg-gray-800 h-40vh grid grid-cols-1 text-white">
+        <h1 className="pt-40 pl-80 text-4xl text-white">{reso.heading}</h1>
+        <p className=" pl-80 text-xl">{meta_description}</p>
       </div>
 
       <div>

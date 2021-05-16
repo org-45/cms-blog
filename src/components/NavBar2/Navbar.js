@@ -6,7 +6,7 @@ import {
   ResourcesDropDown,
   ProductsDropDown,
   // SolutionsDropDown,
-  // CommunityDropDown,
+  CommunityDropDown,
 } from "./DropDowns";
 
 export default function Nanbar() {
@@ -39,10 +39,10 @@ export default function Nanbar() {
             </div>
             {/* <div className="hover:text-yellow-500">
               <SolutionsDropDown />
-            </div>
+            </div> */}
             <div className="hover:text-yellow-500">
               <CommunityDropDown />
-            </div> */}
+            </div>
           </div>
 
           <div className="flex flex-row text-white font-mono text-2xl font-light items-center justify-center w-1/4 space-x-4">
