@@ -292,3 +292,19 @@ collections:
             }
           - { label: "Banner Info", name: "bannerInfo", widget: string }
           - { label: "Banner Url", name: "bannerUrl", widget: string }
+
+  # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TEAMS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "team"
+    label: "Teams"
+    folder: "src/pages/team"
+    create: true
+    fields:
+      - { label: "Member Name", name: "member_name", widget: "string" }
+      - { label: "Member Image", name: "member_image", widget: "image" }
+      - {
+          label: "Member Linkedin Id",
+          name: "member_linkedin",
+          widget: "string",
+        }
+      - { label: "Team Title", name: "team_title", widget: "string" }

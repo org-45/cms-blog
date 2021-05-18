@@ -265,5 +265,11 @@ module.exports = {
     `gatsby-plugin-image`,
     "gatsby-plugin-postcss",
     `gatsby-plugin-antd`,
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `0chain`,
+      },
+    },
   ],
 };

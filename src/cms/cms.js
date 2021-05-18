@@ -8,6 +8,7 @@ import ContactPagePreview from "./preview-templates/ContactPagePreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import ResourcePagePreview from "./preview-templates/ResourcePagePreview";
 import CommunityPagePreview from "./preview-templates/CommunityPagePreview";
+import TeamPagePreview from "./preview-templates/TeamPagePreview";
 
 CMS.init({
   config: {
@@ -25,3 +26,4 @@ CMS.registerPreviewTemplate("blog", ArticlePreview);
 CMS.registerPreviewTemplate("product", ProductPagePreview);
 CMS.registerPreviewTemplate("resource", ResourcePagePreview);
 CMS.registerPreviewTemplate("community", CommunityPagePreview);
+CMS.registerPreviewTemplate("team", TeamPagePreview);
