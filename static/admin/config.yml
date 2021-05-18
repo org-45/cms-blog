@@ -298,7 +298,6 @@ collections:
   - name: "team"
     label: "Teams"
     folder: "src/pages/team"
-    create: true
     fields:
       - { label: "Member Name", name: "member_name", widget: "string" }
       - { label: "Member Image", name: "member_image", widget: "image" }

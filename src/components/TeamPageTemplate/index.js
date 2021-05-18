@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import PropTypes from "prop-types";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const TeamPageTemplate = (props) => {
   const { title, meta_title, meta_description, team } = props;
@@ -34,6 +35,12 @@ const TeamPageTemplate = (props) => {
 
   console.log(teamMap, "this is the preprocessed teamMap");
 
+  let teamArr = [];
+
+  for (let itemm of teamMap.keys()) {
+    teamArr.push(itemm);
+  }
+
   return (
     <div>
       <Helmet>
@@ -41,7 +48,27 @@ const TeamPageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
       {title}
-      <div className="content"></div>
+      <div className="content">
+        {teamArr.map((key, index) => (
+          <div className="">
+            <div className="text-4xl">{key}</div>
+            <div>
+              {teamMap.get(key).map((val, index) => (
+                <div>
+                  <div>{val.member_name}</div>
+                  <div>{val.member_linkedin}</div>
+                  <div>
+                    <GatsbyImage
+                      image={getImage(val.member_image)}
+                      alt={team + index}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
