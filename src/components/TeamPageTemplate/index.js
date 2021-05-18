@@ -47,7 +47,12 @@ const TeamPageTemplate = (props) => {
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
-      {title}
+
+      <div className="section">
+        <h1 className="title">{title}</h1>
+        <p className="is-size-5">{meta_description}</p>
+      </div>
+
       <div className="content">
         {teamArr.map((key, index) => (
           <div className="">
