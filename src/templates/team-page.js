@@ -36,12 +36,22 @@ TeamPage.propTypes = {
 export default TeamPage;
 
 export const teamPageQuery = graphql`
-  query TeamPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query TeamQuery {
+    markdownRemark(frontmatter: { templateKey: { eq: "team-page" } }) {
       frontmatter {
-        title
-        meta_title
         meta_description
+        meta_title
+        title
+        team {
+          member_linkedin
+          member_name
+          team_title
+          member_image {
+            childImageSharp {
+              gatsbyImageData(aspectRatio: 1, height: 200)
+            }
+          }
+        }
       }
     }
   }
