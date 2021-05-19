@@ -1,11 +1,11 @@
 # 0chain.net remake
 
-Check site here : https://peaceful-liskov-0d1d7a.netlify.app/
+Check site here : https://0chaintest.netlify.app
 
 .
 
 # CMS
 
-https://peaceful-liskov-0d1d7a.netlify.app/admin
+https://0chaintest.netlify.app/admin
 
 Login with following Netlify creds:

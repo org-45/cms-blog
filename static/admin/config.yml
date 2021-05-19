@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 #local_backend: true
-site_url: "https://test0chain.netlify.app/"
-display_url: "https://test0chain.netlify.app/"
+site_url: https://test0chain.netlify.app/
+display_url: https://test0chain.netlify.app/
 
 publish_mode: editorial_workflow
 media_folder: static/img
