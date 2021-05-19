@@ -5,6 +5,8 @@ import TeamPageTemplate from "../components/TeamPageTemplate";
 import Layout from "../components/Layout";
 
 const TeamPage = (props) => {
+  console.log(props, "teams props must have data");
+
   const {
     data: {
       markdownRemark: {

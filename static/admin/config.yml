@@ -307,3 +307,22 @@ collections:
           widget: "string",
         }
       - { label: "Team Title", name: "team_title", widget: "string" }
+
+        # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TIMELINE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "timeline"
+    label: "Timeline"
+    folder: "src/pages/timeline"
+    fields:
+      - { label: "Task Id", name: "task_id", widget: "string" }
+      - { label: "Task Name", name: "task_name", widget: "string" }
+      - { label: "Resource", name: "resource", widget: "string" }
+      - { label: "Start Date", name: "start_date", widget: "date" }
+      - { label: "End Date", name: "end_date", widget: "date" }
+      - { label: "Duration", name: "duration", widget: "number" }
+      - {
+          label: "Percentage Complete",
+          name: "percentage_complete",
+          widget: "number",
+        }
+      - { label: "Dependencies", name: "dependencies", widget: "string" }
