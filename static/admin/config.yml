@@ -292,3 +292,49 @@ collections:
             }
           - { label: "Banner Info", name: "bannerInfo", widget: string }
           - { label: "Banner Url", name: "bannerUrl", widget: string }
+
+  # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TEAMS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "team"
+    label: "Teams"
+    folder: "src/pages/team"
+    fields:
+      - {
+          label: "Template key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "team-page",
+        }
+      - { label: "Member Name", name: "member_name", widget: "string" }
+      - { label: "Member Image", name: "member_image", widget: "image" }
+      - {
+          label: "Member Linkedin Id",
+          name: "member_linkedin",
+          widget: "string",
+        }
+      - { label: "Team Title", name: "team_title", widget: "string" }
+
+        # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TIMELINE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - name: "timeline"
+    label: "Timeline"
+    folder: "src/pages/timeline"
+    fields:
+      - {
+          label: "Template key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "timeline-page",
+        }
+      - { label: "Task Id", name: "task_id", widget: "string" }
+      - { label: "Task Name", name: "task_name", widget: "string" }
+      - { label: "Resource", name: "resource", widget: "string" }
+      - { label: "Start Date", name: "start_date", widget: "date" }
+      - { label: "End Date", name: "end_date", widget: "date" }
+      - { label: "Duration", name: "duration", widget: "number" }
+      - {
+          label: "Percentage Complete",
+          name: "percentage_complete",
+          widget: "number",
+        }
+      - { label: "Dependencies", name: "dependencies", widget: "string" }

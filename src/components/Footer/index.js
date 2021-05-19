@@ -6,6 +6,10 @@ import FooterNavbar from "../FooterNav";
 const Footer = (props) => {
   const { copyright } = props;
 
+  const handleFormSubmit = () => {
+    alert("Do you really want to submit?");
+  };
+
   return (
     <footer className="flex flex-col bg-gray-900 h-80vh text-white">
       <div className="bg-black h-15vh grid justify-center items-center">
@@ -18,16 +22,25 @@ const Footer = (props) => {
           height={100}
         />
       </div>
-      <div className="bg-black h-5vh grid grid-cols-1 justify-center items-center text-white">
+      <div className="bg-black h-10vh grid grid-cols-1 justify-center items-center text-white">
         <div className="grid justify-center items-center text-white px-5">
           {`Get updates from us`}
         </div>
 
-        <div className="grid justify-center items-center text-white px-5">
-          <form>
-            <input className="mx-2" />
+        <div className="grid justify-center items-centerpx-5">
+          <form onSubmit={handleFormSubmit}>
+            <input
+              className="m-4 p-4"
+              type="email"
+              className=" text-black "
+              text-black
+            />
 
-            <button className="px-2" style={{ border: "1px solid white" }}>
+            <button
+              className="px-1"
+              style={{ border: "1px solid white" }}
+              type="submit"
+            >
               Contact Us
             </button>
           </form>
