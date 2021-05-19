@@ -1,19 +1,49 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import TeamPageTemplate from "../components/TeamPageTemplate";
 import Layout from "../components/Layout";
 
-const TeamPage = (props) => {
-  console.log(props, "teams props must have data");
+const TeamPage = () => {
+  const data = useStaticQuery(graphql`
+    query TeamQuery {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "team-page" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              meta_description
+              meta_title
+              title
+              team {
+                member_linkedin
+                member_name
+                team_title
+                member_image {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log(
+    data.allMarkdownRemark.edges[0].node.frontmatter,
+    "something up from team"
+  );
 
   const {
-    data: {
-      markdownRemark: {
-        frontmatter: { title, meta_title, meta_description, team },
-      },
-    },
-  } = props;
+    title,
+    meta_description,
+    meta_title,
+    team,
+  } = data.allMarkdownRemark.edges[0].node.frontmatter;
 
   return (
     <Layout>
@@ -21,7 +51,7 @@ const TeamPage = (props) => {
         title={title}
         meta_title={meta_title}
         meta_description={meta_description}
-        team={team}
+        team={[...team]}
       />
     </Layout>
   );
@@ -36,25 +66,3 @@ TeamPage.propTypes = {
 };
 
 export default TeamPage;
-
-export const teamPageQuery = graphql`
-  query TeamQuery {
-    markdownRemark(frontmatter: { templateKey: { eq: "team-page" } }) {
-      frontmatter {
-        meta_description
-        meta_title
-        title
-        team {
-          member_linkedin
-          member_name
-          team_title
-          member_image {
-            childImageSharp {
-              gatsbyImageData(aspectRatio: 1, height: 200)
-            }
-          }
-        }
-      }
-    }
-  }
-`;

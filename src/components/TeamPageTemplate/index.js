@@ -7,6 +7,7 @@ const TeamPageTemplate = (props) => {
   const { title, meta_title, meta_description, team } = props;
 
   console.log(team, "our team data");
+
   //lets pre-process some data here
   const teamTitle = [];
   team.forEach((member, index) => {

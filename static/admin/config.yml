@@ -299,6 +299,12 @@ collections:
     label: "Teams"
     folder: "src/pages/team"
     fields:
+      - {
+          label: "Template key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "team-page",
+        }
       - { label: "Member Name", name: "member_name", widget: "string" }
       - { label: "Member Image", name: "member_image", widget: "image" }
       - {
@@ -314,6 +320,12 @@ collections:
     label: "Timeline"
     folder: "src/pages/timeline"
     fields:
+      - {
+          label: "Template key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "timeline-page",
+        }
       - { label: "Task Id", name: "task_id", widget: "string" }
       - { label: "Task Name", name: "task_name", widget: "string" }
       - { label: "Resource", name: "resource", widget: "string" }

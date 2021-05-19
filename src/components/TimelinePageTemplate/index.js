@@ -2,11 +2,41 @@ import React from "react";
 import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
+import Chart from "react-google-charts";
 const TimelinePageTemplate = (props) => {
   const { title, meta_title, meta_description, timeline } = props;
 
   console.log(timeline, "our timeline data");
+
+  //normalization of timeline data
+
+  const timelineData2 = [
+    [
+      { type: "string", label: "Task ID" },
+      { type: "string", label: "Task Name" },
+      { type: "string", label: "Resource" },
+      { type: "date", label: "Start Date" },
+      { type: "date", label: "End Date" },
+      { type: "number", label: "Duration" },
+      { type: "number", label: "Percent Complete" },
+      { type: "string", label: "Dependencies" },
+    ],
+  ];
+
+  const timelineMapped = timeline.map((data, index) => {
+    return [
+      data.task_id,
+      data.task_name,
+      data.resource,
+      new Date(data.start_date),
+      new Date(data.end_date),
+      null,
+      data.percentage_complete,
+      null,
+    ];
+  });
+
+  timelineData2.push(...timelineMapped);
 
   return (
     <div>
@@ -20,11 +50,7 @@ const TimelinePageTemplate = (props) => {
         <p className="is-size-5">{meta_description}</p>
       </div>
 
-      <div className="h-90vh overscroll-y-auto overflow-auto flex flex-col justify-center items-center">
-        <div className="text-4xl p-5 grid justify-center items-center">
-          Welcome to the Timeline page.
-        </div>
-
+      <div className="p-10 h-auto overscroll-y-auto overflow-auto flex flex-col justify-center items-center">
         <div className="bg-gray-200 overscroll-contain overflow-auto h-auto w-full">
           <div className="grid justify-center items-center">
             <Chart
@@ -32,7 +58,7 @@ const TimelinePageTemplate = (props) => {
               height={"80vh"}
               chartType="Gantt"
               loader={<div>Loading Chart...</div>}
-              data={timelineData}
+              data={timelineData2}
               options={{
                 title: "Timeline",
                 hAxis: { title: "Time" },
@@ -57,8 +83,8 @@ TimelinePageTemplate.propTypes = {
       task_id: PropTypes.string,
       task_name: PropTypes.string,
       resource: PropTypes.string,
-      start_date: PropTypes.instanceOf(Date),
-      end_date: PropTypes.instanceof(Date),
+      start_date: PropTypes.string,
+      end_date: PropTypes.string,
       duration: PropTypes.number,
       percentage_complete: PropTypes.number,
       dependencies: PropTypes.string,
@@ -66,7 +92,7 @@ TimelinePageTemplate.propTypes = {
   ),
 };
 
-export default TeamPageTemplate;
+export default TimelinePageTemplate;
 
 const timelineData = [
   [
