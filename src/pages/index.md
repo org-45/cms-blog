@@ -8,15 +8,24 @@ offerings:
   blurbs:
     - image: /img/coffee.png
       text: Get worldclass storage service with 0Box
+      title: 0Box
+
     - image: /img/coffee-gear.png
       text: our second product
+      title: 0Wallet
+
     - image: /img/tutorials.png
       text: this is our third product
+      title: ZCN
+
     - image: /img/meeting-space.png
-      text: |
-        4th product
+      text: 4th product
+      title: 0Lake
+
     - image: /img/products-grid3.jpg
       text: just now we have added a new product to take care of
+      title: 0ChainNet
+
 testimonials:
   - author: 0chain
     quote: testimonial 1

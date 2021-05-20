@@ -43,7 +43,7 @@ const Banner2 = () => {
           style={{
             backgroundImage: "linear-gradient(to right,#17243b,#4c6975)",
             border: "1px solid #05f2b7",
-            height: "45px",
+            height: "40px",
           }}
         />
       )}

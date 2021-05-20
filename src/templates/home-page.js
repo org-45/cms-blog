@@ -62,8 +62,8 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  width: 800
-                  height: 600
+                  width: 600
+                  height: 400
                   quality: 90
                   layout: CONSTRAINED
                 )
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
               publicURL
             }
             text
+            title
           }
         }
         testimonials {

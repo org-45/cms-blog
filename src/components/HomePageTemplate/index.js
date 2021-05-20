@@ -4,7 +4,7 @@ import Offerings from "../Offerings";
 import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
-
+import StatsShow from "../StatsShow";
 import Partners from "../Partners";
 import ProductSlide from "../ProductSlide";
 import Roadmap from "../Roadmap";
@@ -36,7 +36,7 @@ const HomePageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
       <Carousel carouselData={carouselData} />
-
+      <StatsShow />
       <ProductSlide />
       <Roadmap />
       <LandingBlogs />

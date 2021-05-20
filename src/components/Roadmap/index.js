@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
+import CountDown from "../CountDown";
 
 const VALUES = [
   "2017-08-4",
@@ -115,6 +116,9 @@ export default function Roadmap() {
             21: <InnerTimeline22Q4 />,
           }[state.value]
         }
+      </div>
+      <div className="text-5xl h-15vh justify-center items-center grid">
+        <CountDown />
       </div>
     </div>
   );

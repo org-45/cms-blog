@@ -10,8 +10,17 @@ import sampleVideo from "../../assets/videos/github-2.mp4";
 export default function ProductSlide() {
   return (
     <div>
-      <div className="grid grid-cols-2 h-90vh bg-gray-900">
-        <div className="grid justify-center p-20 items-center text-white bg-gray-700 text-5xl">
+      <div className="grid grid-cols-2 h-100vh">
+        <div className="grid justify-center items-center p-20">
+          {""}
+          ZCN
+        </div>
+        <div className="grid justify-center items-center  text-5xl">
+          Something 2
+        </div>
+      </div>
+      <div className="grid grid-cols-2 h-90vh bg-black">
+        <div className="grid justify-center p-20 items-center text-white text-5xl">
           {" "}
           Storage platform for all sorts of individual, business to enterprise
           level needs.
@@ -28,13 +37,24 @@ export default function ProductSlide() {
           ></video>
         </div>
       </div>
+
       <div className="grid grid-cols-2 h-100vh">
-        <div className="grid justify-center items-center p-20">{"asd "} </div>
-        <div className="grid justify-center items-center  text-5xl">
+        <div className="grid justify-center items-center  p-20">
+          <video
+            autoPlay
+            loop
+            muted
+            src={elephantsVid}
+            width={800}
+            height={600}
+            type="video/webm"
+          ></video>
+        </div>
+        <div className="grid justify-center items-center   text-5xl">
           Something 2
         </div>
       </div>
-      <div className="grid grid-cols-2 h-100vh bg-gray-900">
+      <div className="grid grid-cols-2 h-100vh bg-black">
         <div className="grid justify-center items-center  text-white text-5xl">
           {" "}
           Something 1
