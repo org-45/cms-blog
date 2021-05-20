@@ -36,10 +36,11 @@ const HomePageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
       <Carousel carouselData={carouselData} />
-      <Partners partnersData={partnersLogoArray} />
+
       <ProductSlide />
       <Roadmap />
       <LandingBlogs />
+      <Partners partnersData={partnersLogoArray} />
     </div>
   );
 };

@@ -80,12 +80,7 @@ export const pageQuery = graphql`
         partners_logo_array {
           partner_logo {
             childrenImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED
-                quality: 90
-                aspectRatio: 1
-                height: 70
-              )
+              gatsbyImageData(layout: CONSTRAINED, quality: 90)
             }
           }
         }
