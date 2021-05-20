@@ -5,7 +5,7 @@ import config from "../../../config";
 import Banner2 from "../Banner2";
 import NavBar2 from "../NavBar2";
 import Footer from "../Footer";
-
+import "../../styles/font.css";
 const Layout = (props) => {
   return (
     <>

@@ -2,6 +2,19 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 // import { Field } from "formik";
 import FooterNavbar from "../FooterNav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faGithub,
+  faTelegram,
+  faFacebook,
+  faTwitter,
+  faReddit,
+  faStackOverflow,
+  faYoutube,
+  faMedium,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = (props) => {
   const { copyright } = props;
@@ -101,15 +114,74 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="bg-black h-5vh grid justify-center items-center">
-        <div className="grid grid-cols-8 gap-x-10">
-          <div className="grid">facebook</div>
-          <div className="grid">youtube</div>
-          <div className="grid">3</div>
-          <div className="grid">4</div>
-          <div className="grid">5</div>
-          <div className="grid">3</div>
-          <div className="grid">4</div>
-          <div className="grid">5</div>
+        <div className="grid grid-cols-9 gap-x-10">
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTelegram} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faYoutube} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faReddit} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faMedium} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} size="2x" color={"#07db7c"} />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faStackOverflow}
+              size="2x"
+              color={"#07db7c"}
+            />
+          </a>
+          <a
+            href="https://github.com/0chain"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="2x" color={"#07db7c"} />
+          </a>
         </div>
       </div>
       <div className="bg-black h-10vh grid justify-center items-center">
