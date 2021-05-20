@@ -2,9 +2,11 @@ import React from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCubes,
+  faAngleDoubleRight,
+  faStopwatch,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function StatsShow() {
   return (
