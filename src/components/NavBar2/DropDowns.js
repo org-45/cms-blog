@@ -293,30 +293,34 @@ export const ResourcesDropDown = () => (
 
 //PRODUCTSS
 const menuProducts = (
-  <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
+  <div className="grid grid-cols-5 bg-gray-50 h-50vh max-w-full ">
     {dropDown.products.map((item, index) => (
-      <div className="">
-        <a href={item.page} target="_blank" rel="noopener noreferrer">
-          <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
-            {item.name}{" "}
+      <div>
+        <div className="grid grid-cols-1  justify-center items-center">
+          <div className="w-auto mx-20">
+            <Link to={item.page}>
+              <div className="text-black grid w-auto mt-10 h-10vh text-4xl underline hover:text-yellow-900 justify-center items-center p-1">
+                {item.name}{" "}
+              </div>
+            </Link>
           </div>
-        </a>
-
-        <div className=" grid grid-cols-2 ">
-          {item.subItems.map((sItem, sIndex) => (
-            <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
-              <a
-                href={sItem.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "gray" }}
-              >
-                <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
-                  {sItem.sName}
-                </div>
-              </a>
-            </div>
-          ))}
+          <div className="grid h-20vh text-center w-auto justify-center items-center">
+            shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
+          </div>
+          <div className=" grid h-10vh w-auto justify-center items-center  ">
+            {item.subItems.map((sItem, sIndex) => (
+              <div className="  bg-green-100 m-1 hover:text-yellow-900">
+                <a
+                  href={sItem.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "gray" }}
+                >
+                  <div className="hover:text-yellow-900 ">{sItem.sName}</div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     ))}
@@ -324,12 +328,14 @@ const menuProducts = (
 );
 
 export const ProductsDropDown = () => (
-  <Dropdown overlay={menuProducts} placement="bottomCenter" arrow>
-    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
-      Products
-      <DownOutlined />
-    </button>
-  </Dropdown>
+  <div>
+    <Dropdown overlay={menuProducts} placement="bottomCenter" arrow>
+      <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
+        Products
+        <DownOutlined />
+      </button>
+    </Dropdown>
+  </div>
 );
 
 //solutions
