@@ -271,5 +271,16 @@ module.exports = {
         username: `0chain`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Ubuntu`,
+            variants: [`300`, `400`, `500`, `700`],
+          },
+        ],
+      },
+    },
   ],
 };

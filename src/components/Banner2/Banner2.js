@@ -42,7 +42,6 @@ const Banner2 = () => {
           closable
           style={{
             backgroundImage: "linear-gradient(to right,#17243b,#4c6975)",
-            border: "1px solid #05f2b7",
             height: "40px",
           }}
         />
