@@ -272,14 +272,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Ubuntu`,
-            variants: [`300`, `400`, `500`, `700`],
-          },
-        ],
+        fonts: [`Ubuntu`],
+        display: "swap",
       },
     },
   ],
