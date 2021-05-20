@@ -22,7 +22,12 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.4.2",
+    "@rumess/react-flip-countdown": "^1.2.3",
     "antd": "^4.15.5",
     "bulma": "^0.9.1",
     "formik": "^2.2.6",
@@ -38,6 +43,7 @@
     "gatsby-plugin-netlify-cms": "^4.7.0",
     "gatsby-plugin-nprogress": "^2.7.0",
     "gatsby-plugin-offline": "^3.7.0",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-sass": "^2.8.0",
     "gatsby-plugin-sharp": "^3.4.2",
@@ -59,6 +65,7 @@
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
     "react": "^17.0.1",
+    "react-countup": "^4.3.3",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-fast-marquee": "^1.1.3",
@@ -66,6 +73,7 @@
     "react-helmet": "^6.1.0",
     "react-horizontal-timeline": "^1.5.3",
     "react-share": "^4.3.1",
+    "react-visibility-sensor": "^5.1.1",
     "trim-right": "^1.0.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "yup": "^0.27.0"

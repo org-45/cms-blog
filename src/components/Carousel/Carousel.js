@@ -3,6 +3,8 @@ import React from "react";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Carousel } from "antd";
+// import "./Arrow.css";
+import zchainLooper from "../../assets/videos/0chain_looper.mp4";
 
 var settings = {
   dots: true,
@@ -17,33 +19,55 @@ const Win = ({ carouselData }) => {
   console.log(carouselData, "this is our carousel data");
 
   return (
-    <Carousel
-      autoplay
-      arrows={true}
-      dots={{
-        color: "red",
-      }}
-      className="bg-gray-900 text-white"
-      style={{ height: "80vh" }}
-      {...settings}
-    >
-      <div className="bg-gray-900">
-        <div className="p-20 pl-80 pr-80 flex justify-center text-7xl">
-          {carouselData.frontCarousel.heading}
+    <div>
+      <Carousel
+        autoplay
+        arrows={true}
+        dots={{
+          color: "red",
+        }}
+        className="bg-black text-white"
+        style={{ height: "85vh" }}
+        {...settings}
+      >
+        <div className="bg-black ">
+          <div className="flex justify-center items-center text-7xl">
+            <video
+              autoPlay
+              loop
+              muted
+              src={zchainLooper}
+              className="h-screen w-screen videoLoop z-10 relative "
+              type="video/mp4"
+              style={{
+                height: "85vh",
+                width: "100vw",
+                margin: "0 0 0 0",
+                padding: "0 0 0 0",
+                filter: "grayscale(100%)",
+                filter: "opacity(30%)",
+              }}
+            ></video>
+            <div className="justify-center items-center z-20 absolute h-85vh w-60vw">
+              <div className="p-40 static  flex justify-center text-5xl ">
+                {carouselData.frontCarousel.heading}
+              </div>
+              <div className="w-90 h-90 static p-10  flex justify-center text-xl">
+                {carouselData.frontCarousel.description}
+              </div>
+              <div className="p-10 flex justify-center text-2xl">
+                <button className="border-4 h-5vh border-green-500 hover:border-yellow-500 p-1 rounded">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="p-10 pl-80 pr-80 flex justify-center text-2xl">
-          {carouselData.frontCarousel.description}
-        </div>
-        <div className="p-10 flex justify-center text-2xl">
-          <button className="border-4 border-green-500 hover:border-yellow-500 p-2 rounded transform motion-safe:hover:scale-110">
-            Get Started
-          </button>
-        </div>
-      </div>
-      {carouselData.offerings.map((data, index) => {
-        return <CustomSlide key={index} cData={data} />;
-      })}
-    </Carousel>
+        {carouselData.offerings.map((data, index) => {
+          return <CustomSlide key={index} cData={data} />;
+        })}
+      </Carousel>
+    </div>
   );
 };
 
@@ -52,16 +76,17 @@ export default Win;
 const CustomSlide = ({ cData }) => {
   let imageData = getImage(cData.image);
   return (
-    <div className="bg-gray-900 grid grid-cols-2" style={{ height: "80vh" }}>
-      <div className="bg-gray-900 flex flex-col justify-center items-center ">
-        <div className="text-6xl p-20"> {cData.text}</div>
-        <div className="p-20 flex justify-center text-2xl">
-          <button className="border-4 border-green-500 hover:border-yellow-500 p-2 rounded transform motion-safe:hover:scale-110">
-            Try {cData.text}
+    <div className="bg-black grid grid-cols-2" style={{ height: "85vh" }}>
+      <div className="bg-black flex flex-col justify-center items-center ">
+        <div className="text-6xl p-10"> {cData.title}</div>
+        <div className="text-3xl p-10"> {cData.text}</div>
+        <div className="p-10 flex justify-center text-2xl">
+          <button className="border-4 h-5vh border-green-500 hover:border-yellow-500 p-1 rounded">
+            Explore {cData.title}
           </button>
         </div>
       </div>
-      <div className="bg-gray-900 flex justify-center items-center">
+      <div className="bg-black p-10 flex justify-center items-center">
         <GatsbyImage image={imageData} alt={"carousel alt"} />
       </div>
     </div>

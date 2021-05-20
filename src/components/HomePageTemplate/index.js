@@ -4,11 +4,12 @@ import Offerings from "../Offerings";
 import Testimonials from "../Testimonials";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
-
+import StatsShow from "../StatsShow";
 import Partners from "../Partners";
 import ProductSlide from "../ProductSlide";
 import Roadmap from "../Roadmap";
 import LandingBlogs from "../LandingBlogs";
+import Team from "../Team";
 
 const HomePageTemplate = (props) => {
   const {
@@ -36,10 +37,13 @@ const HomePageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
       <Carousel carouselData={carouselData} />
-      <Partners partnersData={partnersLogoArray} />
+      <StatsShow />
       <ProductSlide />
       <Roadmap />
       <LandingBlogs />
+
+      <Team />
+      <Partners partnersData={partnersLogoArray} />
     </div>
   );
 };
