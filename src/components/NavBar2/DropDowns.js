@@ -239,8 +239,8 @@ const menuResources = (
                 <div className=" w-auto">
                   <a
                     href={sItem.src}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    // target="_blank"
+                    // rel="noopener noreferrer"
                     style={{ color: "gray" }}
                   >
                     <div className="hover:text-yellow-900 mx-3 px-1 ">
@@ -264,8 +264,8 @@ const menuResources = (
             {item.subItems.map((sItem, sIndex) => (
               <div className="m-1  text-lg">
                 <a
-                  href={sItem.src}
-                  target="_blank"
+                  // href={sItem.src}
+                  // target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "gray" }}
                 >
@@ -296,7 +296,7 @@ const menuProducts = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.products.map((item, index) => (
       <div className="">
-        <a href={item.page} target="_blank" rel="noopener noreferrer">
+        <a href={item.page}>
           <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
             {item.name}{" "}
           </div>
@@ -307,8 +307,8 @@ const menuProducts = (
             <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
               <a
                 href={sItem.src}
-                target="_blank"
-                rel="noopener noreferrer"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 style={{ color: "gray" }}
               >
                 <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
@@ -337,7 +337,7 @@ const menuSolutions = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.solutions.map((item, index) => (
       <div className="">
-        <a href={item.page} target="_blank" rel="noopener noreferrer">
+        <a href={item.page}>
           <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
             {item.name}{" "}
           </div>
@@ -348,8 +348,8 @@ const menuSolutions = (
             <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
               <a
                 href={sItem.src}
-                target="_blank"
-                rel="noopener noreferrer"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 style={{ color: "gray" }}
               >
                 <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
@@ -378,7 +378,7 @@ const menuCommunity = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.community.map((item, index) => (
       <div className="">
-        <a href={item.page} target="_blank" rel="noopener noreferrer">
+        <a href={item.page}>
           <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
             {item.name}{" "}
           </div>
@@ -388,8 +388,8 @@ const menuCommunity = (
           {item.subItems.map((sItem, sIndex) => (
             <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
               <a
-                href={sItem.src}
-                target="_blank"
+                // href={sItem.src}
+                // target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "gray" }}
               >

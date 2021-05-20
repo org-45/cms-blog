@@ -67,7 +67,14 @@ export default function LandingBlogs() {
         ))}
       </div>
       <div>
-        <a>See in medium</a>
+        <a
+          href="https://medium.com/0chain"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See in medium
+        </a>
+        <br />
         <Link to="/team">Team</Link>
       </div>
     </div>
