@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
   branch: master
-# local_backend: true
-site_url: https://happy-yonath-1264b8.netlify.app
-display_url: https://happy-yonath-1264b8.netlify.app
+local_backend: true
+# site_url: https://happy-yonath-1264b8.netlify.app
+# display_url: https://happy-yonath-1264b8.netlify.app
 
 publish_mode: editorial_workflow
 media_folder: static/img
