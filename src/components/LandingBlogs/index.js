@@ -45,7 +45,7 @@ export default function LandingBlogs() {
       <div className="grid grid-cols-3 items-center justify-center">
         {data.allMediumPost.edges.map((edge, index) => (
           <div className="grid justify-center items-center ">
-            <div className=" w-3/5 grid justify-self-center self-center bg-gray-100 border-solid border-4 border-green-100 p-5">
+            <div className=" transform hover:scale-110 motion-reduce:transform-none  w-3/5 grid justify-self-center self-center bg-gray-100 border-solid border-4 border-green-100 p-5">
               <a
                 href={medium_slug + edge.node.slug + "-" + edge.node.medium_id}
                 target="_blank"
@@ -56,11 +56,19 @@ export default function LandingBlogs() {
                 </div>
               </a>
 
-              <div>
-                <img
-                  src={medium_cdn + edge.node.virtuals.previewImage.imageId}
-                  alt="medium"
-                />
+              <div className=" ">
+                <a
+                  href={
+                    medium_slug + edge.node.slug + "-" + edge.node.medium_id
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={medium_cdn + edge.node.virtuals.previewImage.imageId}
+                    alt="medium"
+                  />
+                </a>
               </div>
               <div className="grid grid-cols-2 p-3">
                 <div className="grid  justify-self-center self-center font-bold">
@@ -83,7 +91,6 @@ export default function LandingBlogs() {
           target="_blank"
           rel="noopener noreferrer"
         >{`See in medium >>`}</a>
-        <Link to="/team">Team</Link>
       </div>
     </div>
   );

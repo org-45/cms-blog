@@ -9,6 +9,7 @@ import Partners from "../Partners";
 import ProductSlide from "../ProductSlide";
 import Roadmap from "../Roadmap";
 import LandingBlogs from "../LandingBlogs";
+import Team from "../Team";
 
 const HomePageTemplate = (props) => {
   const {
@@ -40,6 +41,8 @@ const HomePageTemplate = (props) => {
       <ProductSlide />
       <Roadmap />
       <LandingBlogs />
+
+      <Team />
       <Partners partnersData={partnersLogoArray} />
     </div>
   );
