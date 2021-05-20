@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
 import CountDown from "../CountDown";
+import ZChainWhitePaper from "../../assets/images/white-papers/0chain_white_paper.png";
+import { Link } from "gatsby";
 
 const VALUES = [
   "2017-08-4",
@@ -126,16 +128,86 @@ export default function Roadmap() {
 
 const InnerTimeline17Q3 = () => {
   return (
-    <div className="h-50vh bg-gray-800 w-60vw text-white grid justify-center items-center">
-      0Chain founded Saswata Basu, CEO Tom Austin, CTO Prof in CS @SJSU
+    <div className="h-50vh bg-gray-800 w-60vw text-white grid grid-cols-3 justify-center items-center">
+      <div className="text-center grid justify-center items-center p-5">
+        <strong className="text-white">Story :</strong>
+        story behind the company start
+      </div>
+      <div className="text-xl font-bold text-center grid  justify-self-center items-self-center">
+        <div className="grid p-5">
+          0Chain founded Saswata Basu, CEO Tom Austin, CTO Prof in CS @SJSU
+        </div>
+        <div className=" grid justify-self-center items-self-center">
+          <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/IggdFxXbnsA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div className=" grid justify-center items-start h-30vh">
+        <div className="p-5"> Some useful links related to the event.</div>
+
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const InnerTimeline17Q4 = () => {
   return (
-    <div className="h-50vh bg-gray-800 w-60vw text-white grid justify-center items-center">
-      0Chain whitepaper
+    <div className="h-50vh bg-gray-800 w-60vw text-white grid grid-cols-3 justify-center items-center">
+      <div className="text-xl font-bold text-center grid  justify-self-center items-self-center">
+        <div className="grid p-5"> 0Chain whitepaper was launched.</div>
+        <div className=" grid justify-self-center items-self-center">
+          <a
+            href="https://drive.google.com/file/d/1PdgyfnkryrCayufxTAa1UhUQ4Z9uSVGK/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={ZChainWhitePaper} style={{ height: "30vh" }} />
+          </a>
+        </div>
+      </div>
+
+      <div className="text-center grid justify-center items-center p-5">
+        <strong className="text-white">Abstract:</strong>
+        0Chain provides automated data privacy compliance, continuous
+        protection, and secured sharing for your application. 0Chain is
+        near-impossible to breach, has an immutable data ledger to resolve
+        disputes, conduct audits, and eliminate data liability. In addition,
+        0Chain enables secured data sharing between customers, partners,
+        internal groups, and employees. And the platform extends private data
+        usage in smart contract applications on blockchain platforms such as
+        Hyperledger and Ethereum with simple API interfaces and can provide such
+        integration with any smart contract blockchains.
+      </div>
+      <div className=" grid justify-center items-start h-30vh">
+        <div className="p-5"> Some useful links related to the event.</div>
+
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+        <Link to="">
+          <div className="grid justify-center items-start">1</div>
+        </Link>
+      </div>
     </div>
   );
 };
