@@ -27,8 +27,8 @@ export default function Nanbar() {
             <div className="hover:text-yellow-500">
               <a
                 href="/blog"
-                target="_blank"
-                rel="noopener noreferrer"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 style={{ fontStyle: "none" }}
               >
                 Blog

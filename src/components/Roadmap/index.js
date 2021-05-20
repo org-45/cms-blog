@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HorizontalTimeline from "react-horizontal-timeline";
+import { Link } from "gatsby";
 
 const VALUES = [
   "2017-08-4",
@@ -33,88 +34,93 @@ export default function Roadmap() {
   });
 
   return (
-    <div className="bg-gray-900 h-100vh text-white">
-      <div className="text-5xl h-20vh justify-center items-center grid">
-        Roadmap
-      </div>
-      <div>
-        {/* Bounding box for the Timeline */}
-        <div
-          style={{
-            width: "60%",
-            height: "100px",
-            margin: "0 auto",
-            padding: "10",
-          }}
-        >
-          <HorizontalTimeline
-            index={state.value}
-            indexClick={(index) => {
-              setState({ value: index, previous: state.value });
-            }}
-            values={VALUES}
-            minEventPadding={90}
-            linePadding={70}
-            labelWidth={100}
-            getLabel={function (date) {
-              console.log(date.slice(5, 7), "unsliced");
-
-              switch (date.slice(5, 7)) {
-                case "01":
-                case "02":
-                case "03": {
-                  return date.slice(0, 4) + " Q1";
-                }
-                case "04":
-                case "05":
-                case "06": {
-                  return date.slice(0, 4) + " Q2";
-                }
-                case "07":
-                case "08":
-                case "09": {
-                  return date.slice(0, 4) + " Q3";
-                }
-                case "10":
-                case "11":
-                case "12": {
-                  return date.slice(0, 4) + " Q4";
-                }
-              }
-            }}
-            styles={{
-              background: "#101010",
-              foreground: "#00cc99",
-              outline: "#c1c1c1",
-            }}
-          />
+    <div>
+      <div className="bg-gray-900 h-100vh text-white">
+        <div className="text-5xl h-20vh justify-center items-center grid">
+          Roadmap
         </div>
-        {
+        <div>
+          {/* Bounding box for the Timeline */}
+          <div
+            style={{
+              width: "60%",
+              height: "100px",
+              margin: "0 auto",
+              padding: "10",
+            }}
+          >
+            <HorizontalTimeline
+              index={state.value}
+              indexClick={(index) => {
+                setState({ value: index, previous: state.value });
+              }}
+              values={VALUES}
+              minEventPadding={90}
+              linePadding={70}
+              labelWidth={100}
+              getLabel={function (date) {
+                console.log(date.slice(5, 7), "unsliced");
+
+                switch (date.slice(5, 7)) {
+                  case "01":
+                  case "02":
+                  case "03": {
+                    return date.slice(0, 4) + " Q1";
+                  }
+                  case "04":
+                  case "05":
+                  case "06": {
+                    return date.slice(0, 4) + " Q2";
+                  }
+                  case "07":
+                  case "08":
+                  case "09": {
+                    return date.slice(0, 4) + " Q3";
+                  }
+                  case "10":
+                  case "11":
+                  case "12": {
+                    return date.slice(0, 4) + " Q4";
+                  }
+                }
+              }}
+              styles={{
+                background: "#101010",
+                foreground: "#00cc99",
+                outline: "#c1c1c1",
+              }}
+            />
+          </div>
           {
-            0: <InnerTimeline17Q3 />,
-            1: <InnerTimeline17Q4 />,
-            2: <InnerTimeline18Q1 />,
-            3: <InnerTimeline18Q2 />,
-            4: <InnerTimeline18Q3 />,
-            5: <InnerTimeline18Q4 />,
-            6: <InnerTimeline19Q1 />,
-            7: <InnerTimeline19Q2 />,
-            8: <InnerTimeline19Q3 />,
-            9: <InnerTimeline19Q4 />,
-            10: <InnerTimeline20Q1 />,
-            11: <InnerTimeline20Q2 />,
-            12: <InnerTimeline20Q3 />,
-            13: <InnerTimeline20Q4 />,
-            14: <InnerTimeline21Q1 />,
-            15: <InnerTimeline21Q2 />,
-            16: <InnerTimeline21Q3 />,
-            17: <InnerTimeline21Q4 />,
-            18: <InnerTimeline22Q1 />,
-            19: <InnerTimeline22Q2 />,
-            20: <InnerTimeline22Q3 />,
-            21: <InnerTimeline22Q4 />,
-          }[state.value]
-        }
+            {
+              0: <InnerTimeline17Q3 />,
+              1: <InnerTimeline17Q4 />,
+              2: <InnerTimeline18Q1 />,
+              3: <InnerTimeline18Q2 />,
+              4: <InnerTimeline18Q3 />,
+              5: <InnerTimeline18Q4 />,
+              6: <InnerTimeline19Q1 />,
+              7: <InnerTimeline19Q2 />,
+              8: <InnerTimeline19Q3 />,
+              9: <InnerTimeline19Q4 />,
+              10: <InnerTimeline20Q1 />,
+              11: <InnerTimeline20Q2 />,
+              12: <InnerTimeline20Q3 />,
+              13: <InnerTimeline20Q4 />,
+              14: <InnerTimeline21Q1 />,
+              15: <InnerTimeline21Q2 />,
+              16: <InnerTimeline21Q3 />,
+              17: <InnerTimeline21Q4 />,
+              18: <InnerTimeline22Q1 />,
+              19: <InnerTimeline22Q2 />,
+              20: <InnerTimeline22Q3 />,
+              21: <InnerTimeline22Q4 />,
+            }[state.value]
+          }
+        </div>
+        <div className=" h-20vh grid items-center justify-end">
+          <Link to="/timeline">{"For more details >>>        "}</Link>
+        </div>
       </div>
     </div>
   );
