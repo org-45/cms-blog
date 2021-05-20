@@ -10,36 +10,26 @@ import sampleVideo from "../../assets/videos/github-2.mp4";
 export default function ProductSlide() {
   return (
     <div>
-      <div className="grid grid-cols-2 h-100vh bg-gray-900">
-        <div className="grid justify-center items-center text-white text-5xl">
+      <div className="grid grid-cols-2 h-90vh bg-gray-900">
+        <div className="grid justify-center p-20 items-center text-white bg-gray-700 text-5xl">
           {" "}
-          Something 1
+          Storage platform for all sorts of individual, business to enterprise
+          level needs.
         </div>
-        <div className="grid justify-center items-center p-20">
+        <div className="grid justify-center items-center h-60 p-20">
           <video
             autoPlay
             loop
             muted
             poster={gitPng}
-            src={gitVideo}
-            width={400}
-            height={800}
+            src={sampleVideo}
+            width={"100%"}
             type="video/mp4"
           ></video>
         </div>
       </div>
       <div className="grid grid-cols-2 h-100vh">
-        <div className="grid justify-center items-center p-20">
-          {" "}
-          <video
-            autoPlay
-            loop
-            muted
-            src={zchainLooper}
-            className="h-screen w-screen"
-            type="video/mp4"
-          ></video>
-        </div>
+        <div className="grid justify-center items-center p-20">{"asd "} </div>
         <div className="grid justify-center items-center  text-5xl">
           Something 2
         </div>
