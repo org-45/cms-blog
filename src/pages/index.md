@@ -6,25 +6,25 @@ description: is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's
 offerings:
   blurbs:
-    - image: /img/coffee.png
-      text: Get worldclass storage service with 0Box
+    - image: /img/0box/0box_hero.png
+      text: Your private cloud. No logins, emails required. Free 2GB.
       title: 0Box
 
-    - image: /img/coffee-gear.png
-      text: our second product
-      title: 0Wallet
-
-    - image: /img/tutorials.png
-      text: this is our third product
+    - image: /img/gfx/permissionless.svg
+      text: Unlike stable coins, ZCN value is based on stored data, speculative demand, and locked/staked tokens.
       title: ZCN
 
-    - image: /img/meeting-space.png
-      text: 4th product
+    - image: /img/gfx/cloud.svg
+      text: Data Privacy, Localization, & High-Security Platform
       title: 0Lake
 
-    - image: /img/products-grid3.jpg
-      text: just now we have added a new product to take care of
-      title: 0ChainNet
+    - image: /img/0wallet/wallet_hero.png
+      text: Air-gap security with your mobile and laptop
+      title: 0Wallet
+
+    - image: /img/rpi.jpeg
+      text: Even an embedded device can host 0Chain network.
+      title: Meta ZCN
 
 testimonials:
   - author: 0chain

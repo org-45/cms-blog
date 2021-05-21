@@ -124,8 +124,21 @@ export default function Roadmap() {
           <Link to="/timeline">{"For more details >>>        "}</Link>
         </div>
       </div>
-      <div className="text-5xl h-15vh justify-center items-center grid">
-        <CountDown />
+      <div className=" h-20vh justify-center items-center grid grid-cols-3">
+        <div></div>
+
+        <div className="grid">
+          <CountDown />
+        </div>
+
+        <div className="justify-self-center">
+          {" "}
+          <a
+            href="/timeline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{`Gant chart section >>`}</a>
+        </div>
       </div>
     </div>
   );
