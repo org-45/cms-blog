@@ -5,6 +5,9 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import ResourcePageTemplate from "../../components/ResourcePageTemplate";
 
+import ZChainPaper from "/static/img/whitepapers/data_privacy.png";
+import ZChainConsensus from "/static/img/whitepapers/consensus_protocol.png";
+
 const WhitepaperPage = ({ data }) => {
   console.log(data, "data");
 
@@ -16,6 +19,110 @@ const WhitepaperPage = ({ data }) => {
       <Helmet title={`0Box ||  ${title} `} />
 
       <ResourcePageTemplate resource={WhitepaperData} />
+      {/* GRID FOR ACTUAL WHITEPAPERS */}
+      <div className="grid grid-cols-2 text-black">
+        {/* 0chain whitepaper */}
+
+        <div className="grid text-black justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <a
+            href="https://drive.google.com/file/d/1PdgyfnkryrCayufxTAa1UhUQ4Z9uSVGK/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <img src={ZChainPaper} alt="0chain white paper" />
+            </div>
+          </a>
+          <div>
+            <strong>Abstract: </strong>
+            0Chain provides automated data privacy compliance, continuous
+            protection, and secured sharing for your application. 0Chain is
+            near-impossible to breach, has an immutable data ledger to resolve
+            disputes, conduct audits, and eliminate data liability. In addition,
+            0Chain enables secured data sharing between customers, partners,
+            internal groups, and employees. And the platform extends private
+            data usage in smart contract applications on blockchain platforms
+            such as Hyperledger and Ethereum with simple API interfaces and can
+            provide such integration with any smart contract blockchains.
+          </div>
+        </div>
+
+        {/* consensus protocol */}
+        <div className="grid justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <div>
+            <img src={ZChainConsensus} alt="0chain white paper" />
+          </div>
+          <div>
+            <strong>Abstract: </strong>
+            We describe the 0Chain blockchain ecosystem, including a new
+            consensus protocol offering fast finality. We provide proofs of
+            security for the protocol, along with experiment results validating
+            its efficiency under realistic network conditions.
+          </div>
+        </div>
+        {/* 0chain whitepaper */}
+        <div className="grid justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <div>
+            <img src={ZChainPaper} alt="0chain white paper" />
+          </div>
+          <div>
+            <strong>Abstract: </strong>
+            0Chain provides automated data privacy compliance, continuous
+            protection, and secured sharing for your application. 0Chain is
+            near-impossible to breach, has an immutable data ledger to resolve
+            disputes, conduct audits, and eliminate data liability. In addition,
+            0Chain enables secured data sharing between customers, partners,
+            internal groups, and employees. And the platform extends private
+            data usage in smart contract applications on blockchain platforms
+            such as Hyperledger and Ethereum with simple API interfaces and can
+            provide such integration with any smart contract blockchains.
+          </div>
+        </div>
+        {/* consensus protocol */}
+        <div className="grid justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <div>
+            <img src={ZChainConsensus} alt="0chain white paper" />
+          </div>
+          <div>
+            <strong>Abstract: </strong>
+            We describe the 0Chain blockchain ecosystem, including a new
+            consensus protocol offering fast finality. We provide proofs of
+            security for the protocol, along with experiment results validating
+            its efficiency under realistic network conditions.
+          </div>
+        </div>
+        {/* 0chain whitepaper */}
+        <div className="grid justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <div>
+            <img src={ZChainPaper} alt="0chain white paper" />
+          </div>
+          <div>
+            <strong>Abstract: </strong>
+            0Chain provides automated data privacy compliance, continuous
+            protection, and secured sharing for your application. 0Chain is
+            near-impossible to breach, has an immutable data ledger to resolve
+            disputes, conduct audits, and eliminate data liability. In addition,
+            0Chain enables secured data sharing between customers, partners,
+            internal groups, and employees. And the platform extends private
+            data usage in smart contract applications on blockchain platforms
+            such as Hyperledger and Ethereum with simple API interfaces and can
+            provide such integration with any smart contract blockchains.
+          </div>
+        </div>
+        {/* consensus protocol */}
+        <div className="grid justify-center items-center border rounded m-10 p-10 transform hover:scale-105 motion-reduce:transform-none">
+          <div>
+            <img src={ZChainConsensus} alt="0chain white paper" />
+          </div>
+          <div>
+            <strong>Abstract: </strong>
+            We describe the 0Chain blockchain ecosystem, including a new
+            consensus protocol offering fast finality. We provide proofs of
+            security for the protocol, along with experiment results validating
+            its efficiency under realistic network conditions.
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -30,7 +137,7 @@ export const WhitepaperPageQuery = graphql`
     }
 
     allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Whitepaper" } } }
+      filter: { frontmatter: { title: { eq: "Whitepapers" } } }
     ) {
       edges {
         node {

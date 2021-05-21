@@ -41,7 +41,8 @@ export const ForumPageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(
                   quality: 90
-                  aspectRatio: 1
+
+                  width: 300
                   placeholder: BLURRED
                   layout: CONSTRAINED
                 )
