@@ -10,10 +10,6 @@ offerings:
       text: Your private cloud. No logins, emails required. Free 2GB.
       title: 0Box
 
-    - image: /img/0wallet/wallet_hero.png
-      text: Air-gap security with your mobile and laptop
-      title: 0Wallet
-
     - image: /img/gfx/permissionless.svg
       text: Unlike stable coins, ZCN value is based on stored data, speculative demand, and locked/staked tokens.
       title: ZCN
@@ -21,6 +17,10 @@ offerings:
     - image: /img/gfx/cloud.svg
       text: Data Privacy, Localization, & High-Security Platform
       title: 0Lake
+
+    - image: /img/0wallet/wallet_hero.png
+      text: Air-gap security with your mobile and laptop
+      title: 0Wallet
 
     - image: /img/rpi.jpeg
       text: Even an embedded device can host 0Chain network.
