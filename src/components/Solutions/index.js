@@ -66,7 +66,7 @@ export default Solutions;
 
 export const BlockChain = () => {
   return (
-    <div className="bg-gray-800 w-screen h-70vh grid grid-cols-3 text-black">
+    <div className="bg-gray-100 w-screen h-70vh grid grid-cols-3 text-black">
       <div className="grid bg-gray-100 justify-center items-center">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
           <div className="grid">
@@ -109,7 +109,7 @@ export const BlockChain = () => {
 
 export const SocialMedia = () => {
   return (
-    <div className="bg-gray-800 w-screen h-70vh grid grid-cols-3 text-black">
+    <div className="bg-gray-100 w-screen h-70vh grid grid-cols-3 text-black">
       <div className="grid bg-gray-100 justify-center items-center">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
           <div className="grid">
@@ -156,7 +156,7 @@ export const SocialMedia = () => {
 
 export const Financials = () => {
   return (
-    <div className="bg-gray-800 w-screen h-70vh grid grid-cols-3 text-black">
+    <div className="bg-gray-100 w-screen h-70vh grid grid-cols-3 text-black">
       <div className="grid bg-gray-100 justify-center items-center">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
           <div className="grid">
@@ -201,7 +201,7 @@ export const Financials = () => {
 
 export const HealthCare = () => {
   return (
-    <div className="bg-gray-800 w-screen h-70vh grid grid-cols-3 text-black">
+    <div className="bg-gray-100 w-screen h-70vh grid grid-cols-3 text-black">
       <div className="grid bg-gray-100 justify-center items-center">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
           <div className="grid">
@@ -238,7 +238,11 @@ export const HealthCare = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img src={HealthCareSolution} alt="block chain image" />
+        <img
+          src={HealthCareSolution}
+          alt="block chain image"
+          className=" h-70vh"
+        />
       </div>
     </div>
   );
@@ -246,7 +250,7 @@ export const HealthCare = () => {
 
 export const SupplyChain = () => {
   return (
-    <div className="bg-gray-800 w-screen h-70vh grid grid-cols-3 text-black">
+    <div className="bg-gray-100 w-screen h-70vh grid grid-cols-3 text-black">
       <div className="grid bg-gray-100 justify-center items-center">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
           <div className="grid">

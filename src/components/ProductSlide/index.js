@@ -80,7 +80,7 @@ export default function ProductSlide() {
         <div className="text-5xl h-20vh justify-center items-center grid">
           Solutions
         </div>
-        <div className="h-80vh w-full">
+        <div className=" h-70vh w-full">
           <Solutions />
         </div>
       </div>
