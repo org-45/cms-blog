@@ -1,7 +1,8 @@
 import { Link } from "gatsby";
 import React from "react";
-import Saswata from "../../assets/images/team/a.jpg";
-import Austin from "../../assets/images/team/b.jpg";
+import Saswata from "/static/img/team/a.jpg";
+import Austin from "/static/img/team/b.jpg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";

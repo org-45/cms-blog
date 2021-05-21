@@ -120,12 +120,22 @@ export default function Roadmap() {
             }[state.value]
           }
         </div>
-        <div className=" h-20vh grid items-center justify-end">
-          <Link to="/timeline">{"For more details >>>        "}</Link>
+        <div className=" h-20vh justify-center items-center grid grid-cols-3">
+          <div></div>
+
+          <div className="grid">
+            <CountDown />
+          </div>
+
+          <div className="justify-self-center">
+            {" "}
+            <a
+              href="/timeline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{`Gant chart section >>`}</a>
+          </div>
         </div>
-      </div>
-      <div className="text-5xl h-15vh justify-center items-center grid">
-        <CountDown />
       </div>
     </div>
   );
@@ -142,15 +152,16 @@ const InnerTimeline17Q3 = () => {
         <div className="grid p-5">
           0Chain founded Saswata Basu, CEO Tom Austin, CTO Prof in CS @SJSU
         </div>
-        <div className=" grid justify-self-center items-self-center">
+        <div className=" grid justify-self-center items-self-center ">
           <iframe
-            width="400"
-            height="300"
+            width="300"
+            height="250"
             src="https://www.youtube.com/embed/IggdFxXbnsA"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            className="rounded-xl"
           ></iframe>
         </div>
       </div>
