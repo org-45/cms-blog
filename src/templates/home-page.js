@@ -61,13 +61,9 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(
-                  width: 600
-                  height: 400
-                  quality: 90
-                  layout: CONSTRAINED
-                )
+                gatsbyImageData(width: 450, quality: 90, layout: CONSTRAINED)
               }
+              extension
               publicURL
             }
             text

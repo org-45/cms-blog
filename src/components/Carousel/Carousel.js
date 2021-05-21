@@ -75,9 +75,10 @@ export default Win;
 
 const CustomSlide = ({ cData }) => {
   let imageData = getImage(cData.image);
+
   return (
     <div className="bg-black grid grid-cols-2" style={{ height: "85vh" }}>
-      <div className="bg-black flex flex-col justify-center items-center ">
+      <div className="bg-black flex flex-col justify-center items-start pl-60 ">
         <div className="text-6xl p-10"> {cData.title}</div>
         <div className="text-3xl p-10"> {cData.text}</div>
         <div className="p-10 flex justify-center text-2xl">
@@ -86,8 +87,12 @@ const CustomSlide = ({ cData }) => {
           </button>
         </div>
       </div>
-      <div className="bg-black p-10 flex justify-center items-center">
-        <GatsbyImage image={imageData} alt={"carousel alt"} />
+      <div className="p-20 flex justify-center items-center">
+        {cData.image.extension === "svg" ? (
+          <img src={cData.image.publicURL} alt={"carousel alt"} />
+        ) : (
+          <GatsbyImage image={getImage(cData.image)} alt={"carousel alt"} />
+        )}
       </div>
     </div>
   );
