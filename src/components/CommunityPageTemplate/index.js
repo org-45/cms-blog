@@ -25,19 +25,27 @@ const CommunityPageTemplate = (props) => {
 
   return (
     <div>
+      {/* HELMET */}
       <Helmet>
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
 
-      <div className="bg-gray-800 h-40vh grid grid-cols-1 text-white">
-        <h1 className="pt-40 pl-80 text-4xl text-white">{reso.heading}</h1>
-        <p className=" pl-80 text-xl">{meta_description}</p>
+      {/* BANNER */}
+      <div className="bg-gray-900 h-40vh grid grid-cols-1 text-white justify-center items-center">
+        <h1 className=" grid pt-20 text-4xl text-white justify-center items-center">
+          {title}
+        </h1>
+        <p className=" grid text-xl justify-center items-center">
+          {meta_description}
+        </p>
       </div>
-
-      <div>
-        <div>{reso.description}</div>
-        <div>
+      {/* SHORT INTRO  */}
+      <div className="grid grid-cols-12 h-auto">
+        <div className="col-span-9  grid justify-center items-center border rounded m-10 p-20">
+          {reso.description}
+        </div>
+        <div className="col-span-3 grid justify-center items-center p-5">
           <a
             href={reso.community_yt_link}
             target="_blank"
@@ -53,6 +61,7 @@ const CommunityPageTemplate = (props) => {
     </div>
   );
 };
+
 CommunityPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,

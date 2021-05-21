@@ -25,19 +25,38 @@ const ProductPageTemplate = (props) => {
 
   return (
     <div>
+      {/* HELMET */}
       <Helmet>
         <title>{meta_title}</title>
         <meta name="description" content={meta_description} />
       </Helmet>
 
-      <div className="section">
-        <h1 className="title">{prod.heading}</h1>
-        <p className="is-size-5">{meta_description}</p>
+      {/* BANNER */}
+      <div className="bg-gray-900 h-40vh grid grid-cols-1 text-white justify-center items-center">
+        <h1 className=" grid pt-20 text-4xl text-white justify-center items-center">
+          {prod.heading}
+        </h1>
+        <p className=" grid text-xl justify-center items-center">
+          {meta_description}
+        </p>
       </div>
-
-      <div>
-        <div>{prod.description}</div>
-        <div dangerouslySetInnerHTML={{ __html: prod.product_yt_link }} />
+      {/* SHORT INTRO  */}
+      <div className="grid grid-cols-12 h-auto">
+        <div className="col-span-9  grid justify-center items-center border rounded m-10 p-20">
+          {prod.description}
+        </div>
+        <div className="col-span-3 grid justify-center items-center">
+          <a
+            href={prod.product_yt_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GatsbyImage
+              image={getImage(prod.product_yt_thumbnail)}
+              alt={"0chain products"}
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
