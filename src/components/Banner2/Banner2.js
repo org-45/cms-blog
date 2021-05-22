@@ -42,7 +42,7 @@ const Banner2 = () => {
           closable
           style={{
             backgroundImage: "linear-gradient(to right,#17243b,#4c6975)",
-            height: "40px",
+            height: "42px",
           }}
         />
       )}
@@ -53,8 +53,8 @@ const Banner2 = () => {
 export default Banner2;
 
 const ActualBanner = ({ text, url }) => (
-  <div className="flex font-light opacity-50  justify-center items-center flex-row font-ubuntu-mono text-2xl ">
-    <div className="text-xl text-white p-2">{text}</div>
+  <div className="flex font-light opacity-50  justify-center items-center flex-row ">
+    <div className="text-white p-2 ">{text}</div>
     <div className="p-3">
       <a
         href={url}

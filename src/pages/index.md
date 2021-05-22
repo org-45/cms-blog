@@ -1,9 +1,8 @@
 ---
 templateKey: home-page
 title: 0chain Network
-heading: Decentralized blockchain based storage platform backed with ZCN
-description: is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's
+heading: Blockchain based storage platform backed with ZCN
+description: World's most advanced blockchain and decentralized storage platform. Use 0Chain for high security, privacy leadership, and reduced liability.
 offerings:
   blurbs:
     - image: /img/0box/0box_hero.png

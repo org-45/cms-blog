@@ -39,7 +39,7 @@ export default function LandingBlogs() {
 
   return (
     <div className="h-100vh grid grid-cols-1">
-      <div className="text-4xl grid items-center justify-start pl-40 ">
+      <div className="text-5xl font-black grid items-center justify-start pl-40 ">
         <h3>Blogs and News</h3>
       </div>
       <div className="grid grid-cols-3 items-center justify-center">

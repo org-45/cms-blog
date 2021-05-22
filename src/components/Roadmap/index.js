@@ -38,7 +38,7 @@ export default function Roadmap() {
   return (
     <div>
       <div className="bg-gray-900 h-100vh text-white">
-        <div className="text-5xl h-20vh justify-center items-center grid">
+        <div className="text-5xl  font-black h-20vh justify-center items-center grid">
           Roadmap
         </div>
         <div>

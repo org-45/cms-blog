@@ -27,8 +27,11 @@ export default function ProductSlide() {
           ></video>
         </div>
         <div className="grid justify-center items-center m-20  text-5xl">
-          <div className="grid">
-            Start earning money on our decentralized dStorage network.{" "}
+          <div className="grid font-black drop-shadow-2xl">
+            Start earning money on our decentralized{" "}
+            <span className="text-6xl p-1 font-black text-transparent bg-clip-text bg-gradient-to-b from-green-500 to-blue-900">
+              dStorage network.
+            </span>{" "}
           </div>
           <div className="grid text-xl pb-10">
             Client splits file, sends to Blobbers. They commit markers to
@@ -43,10 +46,12 @@ export default function ProductSlide() {
       <div className="grid grid-cols-2 h-95vh bg-black">
         <div className="grid grid-cols-1 justify-center p-20 items-center text-white text-5xl">
           <div className="grid justify-center items-center  text-5xl">
-            State of the art protocols leveraging your blockchain based storage
-            needs.
+            State of the art protocols leveraging your
+            <span className="text-6xl p-1 font-black text-transparent bg-clip-text bg-gradient-to-br from-green-500 to-blue-900">
+              blockchain based storage.
+            </span>
           </div>
-          <div className="grid justify-center items-center  text-xl">
+          <div className="grid justify-center items-center text-xl">
             0ChainNet is built from scratch with Golang. Fast, secure, scalable
             permissionless blockchain.
           </div>
@@ -77,7 +82,7 @@ export default function ProductSlide() {
         <div className="grid justify-center items-center   text-5xl">zcn</div>
       </div>
       <div className="grid h-100vh bg-gray-900 text-white ">
-        <div className="text-5xl h-20vh justify-center items-center grid">
+        <div className="text-5xl font-black h-20vh justify-center items-center grid">
           Solutions
         </div>
         <div className=" h-70vh w-full">
