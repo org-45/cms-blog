@@ -13,13 +13,13 @@ export default function Nanbar() {
   return (
     <div>
       <header>
-        <div className="bg-black flex flex-row justify-between items-center h-1/4">
+        <div className="bg-black flex flex-row justify-between items-center h-10vh">
           <div className="flex w-3/4 justify-center">
             <Link to="/">
               <LogoNab />
             </Link>
           </div>
-          <div className="flex flex-row text-white font-mono text-2xl font-light items-center justify-center w-1/2 space-x-6">
+          <div className="flex flex-row text-white font-mono text-xl font-light items-center justify-center w-1/2 space-x-6">
             <div className="hover:text-yellow-500">
               <ResourcesDropDown />
             </div>
@@ -45,8 +45,8 @@ export default function Nanbar() {
             </div>
           </div>
 
-          <div className="flex flex-row text-white font-mono text-2xl font-light items-center justify-center w-1/4 space-x-4">
-            <button className="border-4 border-green-500 hover:border-yellow-500 p-2 rounded transform motion-safe:hover:scale-110">
+          <div className="flex flex-row text-white font-mono text-xl font-light items-center justify-center w-1/4 space-x-4">
+            <button className="border-4 border-green-500 hover:border-yellow-500 p-1 rounded-3xl transform motion-safe:hover:scale-110">
               Try Betanet
             </button>
           </div>
