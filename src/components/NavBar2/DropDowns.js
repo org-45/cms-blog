@@ -223,19 +223,19 @@ const dropDown = {
 
 //RESOURCES
 const menuResources = (
-  <div className="grid grid-cols-3 p-20 bg-gray-50 text-3xl max-w-full">
+  <div className="grid grid-cols-12 bg-gray-50 h-60vh">
     {dropDown.resources.map((item, index) =>
       item.name === "WhitePapers" ? (
-        <div className="p-10 w-auto ">
+        <div className="p-10 w-auto grid col-span-4 ">
           <Link to={item.page}>
-            <div className="text-black underline hover:text-yellow-900 h-25 flex content-center justify-center p-2">
+            <div className="text-black grid underline text-5xl font-black flex content-center justify-center p-5">
               {item.name}{" "}
             </div>
           </Link>
 
-          <div className="grid justify-items-center ">
+          <div className=" grid  justify-center h-full  h-40vh">
             {item.subItems.map((sItem, sIndex) => (
-              <div className="m-1 hover:text-yellow-900 text-lg">
+              <div className="m-1 text-lg">
                 <div className=" w-auto">
                   <a
                     href={sItem.src}
@@ -243,9 +243,7 @@ const menuResources = (
                     // rel="noopener noreferrer"
                     style={{ color: "gray" }}
                   >
-                    <div className="hover:text-yellow-900 mx-3 px-1 ">
-                      {sItem.sName}
-                    </div>
+                    <div className=" mx-3 px-1 ">{sItem.sName}</div>
                   </a>
                 </div>
               </div>
@@ -253,26 +251,26 @@ const menuResources = (
           </div>
         </div>
       ) : (
-        <div className="p-10 w-auto">
+        <div className="p-10 grid col-span-4 justify-center ">
           <Link to={item.page}>
-            <div className="text-black underline hover:text-yellow-900 h-25 flex content-center justify-center p-2">
+            <div className="text-black grid underline text-5xl font-black flex content-center justify-center p-5">
               {item.name}{" "}
             </div>
           </Link>
 
-          <div className=" grid grid-cols-2 justify-items-center ">
+          <div className=" grid grid-cols-2 justify-center h-full  justify-self-start h-40vh">
             {item.subItems.map((sItem, sIndex) => (
-              <div className="m-1  text-lg">
-                <a
-                  // href={sItem.src}
-                  // target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "gray" }}
-                >
-                  <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
-                    {sItem.sName}
-                  </div>
-                </a>
+              <div className="m-1 text-lg  h-5vh">
+                <div className=" w-auto">
+                  <a
+                    href={sItem.src}
+                    // target="_blank"
+                    // rel="noopener noreferrer"
+                    style={{ color: "gray" }}
+                  >
+                    <div className=" mx-3 px-1 ">{sItem.sName}</div>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -293,34 +291,31 @@ export const ResourcesDropDown = () => (
 
 //PRODUCTSS
 const menuProducts = (
-  <div className="grid grid-cols-5 bg-gray-50 h-50vh max-w-full ">
+  <div className="grid grid-cols-10 bg-gray-50 h-70vh">
     {dropDown.products.map((item, index) => (
-      <div>
-        <div className="grid grid-cols-1  justify-center items-center">
-          <div className="w-auto mx-20">
-            <Link to={item.page}>
-              <div className="text-black grid w-auto mt-10 h-10vh text-4xl underline hover:text-yellow-900 justify-center items-center p-1">
-                {item.name}{" "}
-              </div>
-            </Link>
+      <div className="grid col-span-2 justify-center  ">
+        <Link to={item.page}>
+          <div className="text-black m-10 grid underline text-5xl font-black">
+            {item.name}{" "}
           </div>
-          <div className="grid h-20vh text-center w-auto justify-center items-center">
-            shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
-          </div>
-          <div className=" grid h-10vh w-auto justify-center items-center  ">
-            {item.subItems.map((sItem, sIndex) => (
-              <div className="  bg-green-100 m-1 hover:text-yellow-900">
-                <a
-                  href={sItem.src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "gray" }}
-                >
-                  <div className="hover:text-yellow-900 ">{sItem.sName}</div>
-                </a>
-              </div>
-            ))}
-          </div>
+        </Link>
+
+        <div className="grid h-20vh p-5">
+          shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
+        </div>
+        <div className=" grid h-10vh ">
+          {item.subItems.map((sItem, sIndex) => (
+            <div className=" m-1 justify-self-center items-self-center">
+              <a
+                href={sItem.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "gray" }}
+              >
+                {sItem.sName}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     ))}

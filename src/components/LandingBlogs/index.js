@@ -39,7 +39,7 @@ export default function LandingBlogs() {
 
   return (
     <div className="h-100vh grid grid-cols-1">
-      <div className="text-5xl font-black grid items-center justify-start pl-40 ">
+      <div className="text-6xl font-black grid items-center justify-start pl-40 ">
         <h3>Blogs and News</h3>
       </div>
       <div className="grid grid-cols-3 items-center justify-center">
@@ -51,7 +51,7 @@ export default function LandingBlogs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="font-bold text-xl p-3 text-center">
+                <div className="font-bold text-black text-xl p-3 text-center">
                   {edge.node.title}
                 </div>
               </a>
@@ -95,11 +95,3 @@ export default function LandingBlogs() {
     </div>
   );
 }
-
-/* 
-
-
-
-             `${medium_cdn}${edge.node.virtuals.previewImage.imageId}`
-            
-            */
