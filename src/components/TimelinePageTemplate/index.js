@@ -3,6 +3,9 @@ import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Chart from "react-google-charts";
+
+import "./index.css";
+
 const TimelinePageTemplate = (props) => {
   const { title, meta_title, meta_description, timeline } = props;
 
@@ -45,31 +48,37 @@ const TimelinePageTemplate = (props) => {
         <meta name="description" content={meta_description} />
       </Helmet>
 
-      <div className="section">
-        <h1 className="title">{title}</h1>
-        <p className="is-size-5">{meta_description}</p>
+      {/* BANNER */}
+      <div className="bg-gray-900 h-40vh grid grid-cols-1 text-white justify-center items-center">
+        <h1 className=" grid pt-20 text-6xl font-black  text-white justify-center items-center">
+          {title}
+        </h1>
+        <p className=" grid text-xl justify-center items-center">
+          {meta_description}
+        </p>
       </div>
 
-      <div className="p-10 h-auto overscroll-y-auto overflow-auto flex flex-col justify-center items-center">
-        <div className="bg-gray-200 overscroll-contain overflow-auto h-auto w-full">
-          <div className="grid justify-center items-center">
-            <Chart
-              width={"80vw"}
-              height={"80vh"}
-              chartType="Gantt"
-              loader={<div>Loading Chart...</div>}
-              data={timelineData2}
-              options={{
-                title: "Timeline",
-                hAxis: { title: "Time" },
-                vAxis: { title: "Events" },
-                gantt: {
-                  trackHeight: 30,
-                },
-              }}
-            />
-          </div>
-        </div>
+      {/* Gantt */}
+      <div className=" overscroll-y-auto overflow-auto overscroll-contain grid justify-center items-center p-20 ">
+        <Chart
+          width={"80vw"}
+          height={"80vh"}
+          chartType="Gantt"
+          loader={<div>Loading Chart...</div>}
+          data={timelineData2}
+          options={{
+            title: "Timeline",
+            hAxis: { title: "Time" },
+            vAxis: { title: "Events" },
+            gantt: {
+              trackHeight: 30,
+              labelStyle: {
+                fontSize: 13,
+                margin: 30,
+              },
+            },
+          }}
+        />
       </div>
     </div>
   );

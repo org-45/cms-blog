@@ -42,28 +42,23 @@ const BlogPage = (props) => {
   return (
     <Layout>
       <Helmet>
-        <title>Blog | Gatsby Starter Business</title>
+        <title>Blog | 0chain </title>
         {/* Schema.org tags */}
         <script type="application/ld+json">
           {JSON.stringify(websiteSchemaOrgJSONLD)}
         </script>
       </Helmet>
-      <section className="hero is-primary is-bold">
-        <div className="hero-body">
-          <div className="container">
-            <div className="columns">
-              <div className="column is-10 is-offset-2">
-                <div className="section">
-                  <h1 className="title">Blogs</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section">
+
+      {/* BANNER */}
+      <div className="bg-gradient-to-br from-green-400 to-green-900 h-40vh grid grid-cols-1 text-white justify-center items-center">
+        <h1 className=" grid pt-20 text-5xl font-black  text-white justify-center items-center">
+          {"Blog"}
+        </h1>
+      </div>
+
+      <section className="px-60">
         <PostCard posts={group} />
-        <section className="section">
+        <section className="p-10">
           <div className="buttons is-centered">
             <PaginationLink
               test={first}

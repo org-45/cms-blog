@@ -80,26 +80,27 @@ ArticlePage.propTypes = {
 
 export default ArticlePage;
 
-export const pageQuery = graphql`query ArticleByID($id: String!) {
-  markdownRemark(id: {eq: $id}) {
-    id
-    html
-    fields {
-      slug
-    }
-    frontmatter {
-      date(formatString: "MMMM DD, YYYY")
-      title
-      cover {
-        childImageSharp {
-          gatsbyImageData(quality: 72, layout: FULL_WIDTH)
-        }
-        publicURL
+export const pageQuery = graphql`
+  query ArticleByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      fields {
+        slug
       }
-      meta_title
-      meta_description
-      tags
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        cover {
+          childImageSharp {
+            gatsbyImageData(quality: 72, layout: CONSTRAINED)
+          }
+          publicURL
+        }
+        meta_title
+        meta_description
+        tags
+      }
     }
   }
-}
 `;
