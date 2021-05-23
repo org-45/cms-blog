@@ -18,11 +18,16 @@ const TeamPage = () => {
               title
               team {
                 member_linkedin
+                member_bio
                 member_name
                 team_title
                 member_image {
                   childImageSharp {
-                    gatsbyImageData
+                    gatsbyImageData(
+                      width: 150
+                      quality: 90
+                      layout: CONSTRAINED
+                    )
                   }
                 }
               }
