@@ -16,6 +16,7 @@ const TeamPreview = ({ entry, widgetFor }) => {
               member_name: entry.getIn(["data", "team", "member_name"]),
               member_image: entry.getIn(["data", "team", "member_image"]),
               member_linkedin: entry.getIn(["data", "team", "member_linkedin"]),
+              member_bio: entry.getIn(["data", "team", "member_bio"]),
             }}
           />
         </div>

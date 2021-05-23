@@ -223,20 +223,20 @@ const dropDown = {
 
 //RESOURCES
 const menuResources = (
-  <div className="grid grid-cols-12 bg-gray-50 h-60vh">
+  <div className="grid grid-cols-12 bg-gray-50 h-60vh w-screen">
     {dropDown.resources.map((item, index) =>
       item.name === "WhitePapers" ? (
-        <div className="p-10 w-auto grid col-span-4 ">
+        <div className="p-10 grid col-span-4 ">
           <Link to={item.page}>
             <div className="text-black grid underline text-5xl font-black flex content-center justify-center p-5">
               {item.name}{" "}
             </div>
           </Link>
 
-          <div className=" grid  justify-center h-full  h-40vh">
+          <div className=" grid  justify-center">
             {item.subItems.map((sItem, sIndex) => (
               <div className="m-1 text-lg">
-                <div className=" w-auto">
+                <div className=" ">
                   <a
                     href={sItem.src}
                     // target="_blank"
@@ -260,8 +260,8 @@ const menuResources = (
 
           <div className=" grid grid-cols-2 justify-center h-full  justify-self-start h-40vh">
             {item.subItems.map((sItem, sIndex) => (
-              <div className="m-1 text-lg  h-5vh">
-                <div className=" w-auto">
+              <div className="m-1 text-lg">
+                <div className=" ">
                   <a
                     href={sItem.src}
                     // target="_blank"
@@ -281,7 +281,7 @@ const menuResources = (
 );
 
 export const ResourcesDropDown = () => (
-  <Dropdown overlay={menuResources} placement="bottomCenter" arrow>
+  <Dropdown overlay={menuResources} arrow>
     <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
       Resources
       <DownOutlined />
@@ -293,15 +293,17 @@ export const ResourcesDropDown = () => (
 const menuProducts = (
   <div className="grid grid-cols-10 bg-gray-50 h-70vh">
     {dropDown.products.map((item, index) => (
-      <div className="grid col-span-2 justify-center  ">
+      <div className="grid col-span-2 justify-center items-center p-10">
         <Link to={item.page}>
-          <div className="text-black m-10 grid underline text-5xl font-black">
+          <div className="text-black m-2 justify-center items-center grid underline text-5xl font-black">
             {item.name}{" "}
           </div>
         </Link>
 
-        <div className="grid h-20vh p-5">
-          shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
+        <div className="grid justify-center items-center">
+          shoret a siudais iausdbi uiuasbd asidsai ui iashd shoret a siudais
+          iausdbi uiuasbd asidsai ui iashd shoret a siudais iausdbi uiuasbd
+          asidsai ui iashd shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
         </div>
         <div className=" grid h-10vh ">
           {item.subItems.map((sItem, sIndex) => (
@@ -324,7 +326,7 @@ const menuProducts = (
 
 export const ProductsDropDown = () => (
   <div>
-    <Dropdown overlay={menuProducts} placement="bottomCenter" arrow>
+    <Dropdown overlay={menuProducts} arrow>
       <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
         Products
         <DownOutlined />
@@ -333,8 +335,53 @@ export const ProductsDropDown = () => (
   </div>
 );
 
+//community
+const menuCommunity = (
+  <div className="grid grid-cols-10 bg-gray-50 h-70vh">
+    {dropDown.community.map((item, index) => (
+      <div className="grid col-span-2 justify-center items-center p-10">
+        <a href={item.page}>
+          <div className="text-black m-2 justify-center items-center grid underline text-5xl font-black">
+            {item.name}{" "}
+          </div>
+        </a>
+
+        <div className="grid justify-center items-center">
+          shoret a siudais iausdbi uiuasbd asidsai ui iashd shoret a siudais
+          iausdbi uiuasbd asidsai ui iashd shoret a siudais iausdbi uiuasbd
+          asidsai ui iashd shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
+        </div>
+
+        <div className=" grid h-10vh ">
+          {item.subItems.map((sItem, sIndex) => (
+            <div className=" m-1 justify-self-center items-self-center">
+              <a
+                // href={sItem.src}
+                // target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "gray" }}
+              >
+                <div className="">{sItem.sName}</div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+export const CommunityDropDown = () => (
+  <Dropdown overlay={menuCommunity} arrow>
+    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
+      Community
+      <DownOutlined />
+    </button>
+  </Dropdown>
+);
+
 //solutions
-const menuSolutions = (
+/* const menuSolutions = (
   <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
     {dropDown.solutions.map((item, index) => (
       <div className="">
@@ -349,8 +396,8 @@ const menuSolutions = (
             <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
               <a
                 href={sItem.src}
-                // target="_blank"
-                // rel="noopener noreferrer"
+                 target="_blank"
+                 rel="noopener noreferrer"
                 style={{ color: "gray" }}
               >
                 <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
@@ -373,44 +420,4 @@ export const SolutionsDropDown = () => (
     </button>
   </Dropdown>
 );
-
-//community
-const menuCommunity = (
-  <div className="flex flex-col p-8 bg-gray-50 space-y-6 w-300">
-    {dropDown.community.map((item, index) => (
-      <div className="">
-        <a href={item.page}>
-          <div className="text-sl text-black hover:text-green-900 h-25 flex content-center justify-center p-5">
-            {item.name}{" "}
-          </div>
-        </a>
-
-        <div className=" grid grid-cols-2 ">
-          {item.subItems.map((sItem, sIndex) => (
-            <div className="w-200 h-100 bg-green-100 m-3 hover:text-yellow-900">
-              <a
-                // href={sItem.src}
-                // target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "gray" }}
-              >
-                <div className="hover:text-yellow-900 w-auto mx-3 px-1 ">
-                  {sItem.sName}
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    ))}
-  </div>
-);
-
-export const CommunityDropDown = () => (
-  <Dropdown overlay={menuCommunity} placement="bottomCenter" arrow>
-    <button onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
-      Community
-      <DownOutlined />
-    </button>
-  </Dropdown>
-);
+ */

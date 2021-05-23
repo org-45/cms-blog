@@ -51,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
-            excerpt(pruneLength: 400)
+            excerpt(pruneLength: 200)
             id
             fields {
               slug
@@ -61,8 +61,8 @@ exports.createPages = ({ actions, graphql }) => {
               cover {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 500
-                    quality: 50
+                    width: 250
+                    quality: 80
                     placeholder: BLURRED
                     layout: CONSTRAINED
                   )
@@ -93,14 +93,6 @@ exports.createPages = ({ actions, graphql }) => {
         posts = posts.concat(edge);
       }
     });
-
-    //ProductPages
-    // let products = [];
-    // postsAndPages.forEach((edge) => {
-    //   if (_.isMatch(edge.node.frontmatter, { templateKey: "product-page" })) {
-    //     products = products.concat(edge);
-    //   }
-    // });
 
     createPaginatedPages({
       edges: posts,
@@ -157,19 +149,6 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 };
-
-// Make product pages
-// products.forEach((product) => {
-//   const productPath = `/products/${_.kebabCase(product)}/`;
-
-//   createPage({
-//     path: productPath,
-//     component: path.resolve(`src/templates/product-page.js`),
-//     context: {
-//       tag,
-//     },
-//   });
-// });
 
 //here we can make updates to products pages from the field values of the cms
 // we do need to keep the md section intact based on the md section our
