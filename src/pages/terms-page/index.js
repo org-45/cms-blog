@@ -4,14 +4,14 @@ import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 
-const PrivacyPolicyPage = () => {
+const Terms = () => {
   return (
     <Layout>
       <Helmet title={`0Chain | Privacy Policy`} />
       <div className="grid p-40">
         <div className=" text-5xl font-black  justify-center items-center grid">
           {" "}
-          0Chain.net Privacy Policy
+          0Chain.net Terms of use
         </div>
         <div className="grid p-40 justify-start items-start bg-gray-100 m-10">
           <p>Last updated: July 26, 2019</p>
@@ -162,4 +162,4 @@ const PrivacyPolicyPage = () => {
     </Layout>
   );
 };
-export default PrivacyPolicyPage;
+export default Terms;

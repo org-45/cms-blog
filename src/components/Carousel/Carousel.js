@@ -91,7 +91,11 @@ const CustomSlide = ({ cData }) => {
         {cData.image.extension === "svg" ? (
           <img src={cData.image.publicURL} alt={"carousel alt"} />
         ) : (
-          <GatsbyImage image={getImage(cData.image)} alt={"carousel alt"} />
+          <GatsbyImage
+            image={getImage(cData.image)}
+            alt={"carousel alt"}
+            className=" rounded-2xl"
+          />
         )}
       </div>
     </div>

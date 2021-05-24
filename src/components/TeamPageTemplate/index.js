@@ -87,6 +87,7 @@ const TeamPageTemplate = (props) => {
                     <GatsbyImage
                       image={getImage(val.member_image)}
                       alt={team + index}
+                      className="rounded-3xl"
                     />
                   </div>
                 </div>
