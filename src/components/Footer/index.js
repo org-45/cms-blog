@@ -41,166 +41,111 @@ const Footer = (props) => {
           {`Get updates from us`}
         </div>
 
-        <div className="grid justify-center items-centerpx-5">
-          <form onSubmit={handleFormSubmit}>
-            <input
-              className="p-1 rounded-full border-green-500 border-2 text-black"
-              type="email"
-            />
-
+        <div className="grid justify-center items-center px-5">
+          <Link to="/contact">
             <button
-              className="m-2 border-2 rounded-full p-1 border-green-500"
+              className="m-2 border-2 rounded-full p-1 border-green-500 text-white"
               type="submit"
             >
               Contact Us
             </button>
-          </form>
+          </Link>
         </div>
       </div>
+
       <div className="bg-black h-30vh grid justify-center items-start">
-        <div className="grid grid-cols-5 gap-x-20">
-          <div className="grid grid-cols-1 items-start h-25vh">
-            <div className=" grid justify-center items-center p-3 h-5vh  font-bold">
-              0CHAIN
-            </div>
+        <div className="grid grid-cols-5 gap-x-20 p-5">
+          <div className="flex flex-col items-start h-25vh ">
+            <div className="   h-5vh  font-bold">0CHAIN</div>
             <Link to="/products/0chain-net">
-              <div className=" grid justify-center text-white opacity-50 ">
-                0ChainNet
-              </div>
+              <div className="  text-white opacity-50 ">0ChainNet</div>
             </Link>
             <Link to="/resources/whitepaper">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Whitepapers
-              </div>
+              <div className="  text-white opacity-50 ">Whitepapers</div>
             </Link>
             <Link to="/community/zcn">
-              <div className=" grid justify-center text-white opacity-50 ">
-                ZCN
-              </div>
+              <div className="  text-white opacity-50 ">ZCN</div>
             </Link>
 
             <Link to="/blog">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Blog
-              </div>
+              <div className="  text-white opacity-50 ">Blog</div>
             </Link>
 
             <Link to="/faq">
-              <div className=" grid justify-center text-white opacity-50 ">
-                FAQ
-              </div>
+              <div className="  text-white opacity-50 ">FAQ</div>
             </Link>
           </div>
-          <div className="grid grid-cols-1 items-start h-25vh">
-            <div className=" grid justify-center items-center p-3 h-5vh  font-bold">
-              PRODUCTS
-            </div>
+
+          <div className="flex flex-col items-start h-25vh ">
+            <div className="  items-center h-5vh  font-bold">PRODUCTS</div>
 
             <Link to="/products/0box">
-              <div className=" grid justify-center text-white opacity-50 ">
-                0Box
-              </div>
+              <div className="  text-white opacity-50 ">0Box</div>
             </Link>
             <Link to="/products/0Wallet">
-              <div className=" grid justify-center text-white opacity-50 ">
-                0Wallet
-              </div>
+              <div className="  text-white opacity-50 ">0Wallet</div>
             </Link>
             <Link to="/products/0lake">
-              <div className=" grid justify-center text-white opacity-50 ">
-                0Lake
-              </div>
+              <div className="  text-white opacity-50 ">0Lake</div>
             </Link>
             <Link to="/products/0stor">
-              <div className=" grid justify-center text-white opacity-50 ">
-                0Stor
-              </div>
+              <div className="  text-white opacity-50 ">0Stor</div>
             </Link>
           </div>
-          <div className="grid grid-cols-1 items-start h-25vh">
-            <div className=" grid justify-center h-5vh  items-center p-3 font-bold">
-              COMMUNITY
-            </div>
+
+          <div className="flex flex-col items-start h-25vh ">
+            <div className="  h-5vh  items-center font-bold">COMMUNITY</div>
             <Link to="/community/be-a-miner">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Be a miner
-              </div>
+              <div className="  text-white opacity-50 ">Be a miner</div>
             </Link>
             <Link to="/community/developer-programs">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Developer
-              </div>
+              <div className="  text-white opacity-50 ">Developer</div>
             </Link>
             <Link to="/community/bug-bounty">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Bug Bounty
-              </div>
+              <div className="  text-white opacity-50 ">Bug Bounty</div>
             </Link>
             <Link to="/community/forum">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Forum
-              </div>
+              <div className="  text-white opacity-50 ">Forum</div>
             </Link>
             <Link to="/resources/documentation">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Documentation
-              </div>
+              <div className="  text-white opacity-50 ">Documentation</div>
             </Link>
             <Link to="/resources/github">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Github
-              </div>
+              <div className="  text-white opacity-50 ">Github</div>
             </Link>
             <Link to="https://documenter.getpostman.com/view/5505940/TzJpgysM">
-              <div className=" grid justify-center text-white opacity-50 ">
-                API
-              </div>
+              <div className="  text-white opacity-50 ">API</div>
             </Link>
           </div>
-          <div className="grid grid-cols-1 justify-center items-start h-25vh">
-            <div className=" grid justify-center h-5vh  items-center p-3 font-black">
-              COMPANY
-            </div>
+
+          <div className="flex flex-col items-start h-25vh ">
+            <div className=" h-5vh  items-center  font-black">COMPANY</div>
             <Link to="/team">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Team
-              </div>
+              <div className=" text-white opacity-50 ">Team</div>
             </Link>
             <Link to="/#solutions">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Solution
-              </div>
+              <div className=" text-white opacity-50 ">Solution</div>
             </Link>
             <Link to="/timeline">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Timeline
-              </div>
+              <div className=" text-white opacity-50 ">Timeline</div>
             </Link>
             <Link to="/blog">
-              <div className=" grid justify-center text-white opacity-50 ">
-                News
-              </div>
+              <div className=" text-white opacity-50 ">News</div>
             </Link>
             <Link to="https://drive.google.com/drive/folders/135QcA5Yh_WjgjceesKTgGOphkIdsSKmf">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Media Kit
-              </div>
+              <div className=" text-white opacity-50 ">Media Kit</div>
             </Link>
             <Link to="/contact">
-              <div className=" grid justify-center text-white opacity-50 ">
-                Contact Us
-              </div>
+              <div className=" text-white opacity-50 ">Contact Us</div>
             </Link>
           </div>
-          <div className="grid grid-cols-1 ">
-            <div className=" grid justify-center items-center">
-              <button className="px-2 border-2 rounded-full border-green-500">
-                Try Betanet
-              </button>
-              <button className="px-2 border-2 rounded-full border-green-500">
-                Try our Products
-              </button>
-            </div>
+          <div className="flex flex-col items-start h-25vh gap-4 ">
+            <button className=" border-2 p-1 rounded-full border-green-500">
+              Try Betanet
+            </button>
+            <button className=" border-2 p-1 rounded-full border-green-500">
+              Try our Products
+            </button>
           </div>
         </div>
       </div>

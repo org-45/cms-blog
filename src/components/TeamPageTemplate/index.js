@@ -66,10 +66,17 @@ const TeamPageTemplate = (props) => {
             <div className="text-5xl font-black  p-10 grid justify-center items-center  text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-blue-900">
               {key}
             </div>
-            <div className="grid grid-cols-2  justify-center items-center">
+            <div className="grid grid-cols-4  justify-self-center items-center">
               {teamMap.get(key).map((val, index) => (
-                <div className="grid p-10  justify-center items-center ">
-                  <div className="grid p-5 font-black justify-center items-center underline">
+                <div className="flex flex-col p-5  h-max-50vh justify-center items-center ">
+                  <div className="justify-center items-center p-2 flex">
+                    <GatsbyImage
+                      image={getImage(val.member_image)}
+                      alt={team + index}
+                      className="rounded-3xl"
+                    />
+                  </div>
+                  <div className="flex p-5 font-black justify-center items-center underline">
                     <a
                       href={val.member_linkedin}
                       target="_blank"
@@ -79,17 +86,8 @@ const TeamPageTemplate = (props) => {
                       {val.member_name}
                     </a>
                   </div>
-                  <div className="grid text-center p-2 w-60">
-                    {val.member_bio}
-                  </div>
 
-                  <div className="justify-center items-center p-2 grid">
-                    <GatsbyImage
-                      image={getImage(val.member_image)}
-                      alt={team + index}
-                      className="rounded-3xl"
-                    />
-                  </div>
+                  <div className=" text-center p-2 w-60">{val.member_bio}</div>
                 </div>
               ))}
             </div>
