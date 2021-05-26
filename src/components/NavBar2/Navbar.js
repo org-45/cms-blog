@@ -35,13 +35,13 @@ const MNav = () => {
         " bg-gray-900 flex flex-col " + (navbarOpen ? "h-60vh" : "h-10vh ")
       }
     >
-      <div className="flex flex-row w-full bg-pink-100 ">
+      <div className="flex flex-row w-full  ">
         <div className="flex  mx-10 ">
           <Link to="/">
             <LogoNab />
           </Link>
         </div>
-        <div className="flex bg-green-100 justify-end place-items-end w-full items-center">
+        <div className="flex justify-end place-items-end w-full items-center">
           <div
             className="bg-blue-100 cursor-pointer border-2 hover:border-yellow-500 mx-10"
             onClick={handleToggle}
