@@ -8,8 +8,12 @@ import {
   faStopwatch,
 } from "@fortawesome/free-solid-svg-icons";
 
+import useWindowSize from "/screenSize";
+
 export default function StatsShow() {
-  return <LStats />;
+  const { width } = useWindowSize();
+
+  return width > 1300 ? <LStats /> : <MStats />;
 }
 
 const LStats = () => {
@@ -86,6 +90,94 @@ const LStats = () => {
             </VisibilitySensor>
           )}
         </CountUp>
+      </div>
+    </div>
+  );
+};
+
+const MStats = () => {
+  return (
+    <div className="grid grid-cols-2 justify-center items-center bg-gray-900  text-white h-30vh">
+      <div className="grid justify-center items-center">
+        <div className="flex flex-row">
+          <div className="  p-2 justify-center items-center">
+            <FontAwesomeIcon icon={faCubes} size="1x" />
+          </div>
+
+          <CountUp end={403016} redraw={true} suffix={"+"}>
+            {({ countUpRef, start }) => (
+              <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+              </VisibilitySensor>
+            )}
+          </CountUp>
+        </div>
+        <div className="grid p-1 justify-center items-center">
+          Blocks Finalized
+        </div>
+      </div>
+
+      <div className="grid justify-center items-center">
+        <div className="flex flex-row">
+          <div className="  p-2 justify-center items-center">
+            {" "}
+            <FontAwesomeIcon icon={faAngleDoubleRight} size="1x" />
+          </div>
+
+          <CountUp end={1.704} redraw={true} suffix={"M+"} decimals={4}>
+            {({ countUpRef, start }) => (
+              <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+              </VisibilitySensor>
+            )}
+          </CountUp>
+        </div>
+        <div className="grid p-1 justify-center items-center">
+          {" "}
+          No of transactions
+        </div>
+      </div>
+
+      <div className="grid justify-center items-center">
+        <div className="flex flex-row">
+          <div className="  p-2 justify-center items-center">
+            {" "}
+            <FontAwesomeIcon icon={faCubes} size="1x" />
+          </div>
+
+          <CountUp end={403016} redraw={true} suffix={"+"}>
+            {({ countUpRef, start }) => (
+              <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+              </VisibilitySensor>
+            )}
+          </CountUp>
+        </div>
+        <div className="grid p-1 justify-center items-center">
+          {" "}
+          Blocks Finalized
+        </div>
+      </div>
+
+      <div className="grid justify-center items-center">
+        <div className="flex flex-row">
+          <div className="  p-2 justify-center items-center">
+            {" "}
+            <FontAwesomeIcon icon={faAngleDoubleRight} size="1x" />
+          </div>
+
+          <CountUp end={1.704} redraw={true} suffix={"M+"} decimals={4}>
+            {({ countUpRef, start }) => (
+              <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+              </VisibilitySensor>
+            )}
+          </CountUp>
+        </div>
+        <div className="grid p-1 justify-center items-center">
+          {" "}
+          No of transactions
+        </div>
       </div>
     </div>
   );
