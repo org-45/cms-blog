@@ -36,7 +36,7 @@ const MNav = () => {
       }
     >
       <div className="flex flex-row w-full  ">
-        <div className="flex  mx-10 ">
+        <div className="flex m-3 ">
           <Link to="/">
             <LogoNab />
           </Link>
@@ -127,12 +127,7 @@ const LogoNab = () => {
       quality={90}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="0chain logo"
-      style={{
-        maxHeight: "60px",
-        width: "250px",
-        margin: "10px",
-        padding: "10px",
-      }}
+      className="m-3"
     />
   );
 };
