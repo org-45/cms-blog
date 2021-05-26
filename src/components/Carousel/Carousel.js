@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import ProgressiveImageContainer from "../ProgressiveImageContainer";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -6,7 +6,7 @@ import { Carousel } from "antd";
 // import "./Arrow.css";
 import zchainLooper from "../../assets/videos/0chain_looper.mp4";
 
-import useWindowDimensions from "/screenSize.js";
+import useWindowSize from "/screenSize.js";
 
 var settings = {
   dots: true,
@@ -18,7 +18,7 @@ var settings = {
 };
 
 const Win = ({ carouselData }) => {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowSize();
 
   console.log(carouselData, "this is our carousel data");
 
