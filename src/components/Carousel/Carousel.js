@@ -6,7 +6,7 @@ import { Carousel } from "antd";
 // import "./Arrow.css";
 import zchainLooper from "../../assets/videos/0chain_looper.mp4";
 
-import useWindowDimensions from "../../utility/screenSize";
+import useWindowDimensions from "/screenSize.js";
 
 var settings = {
   dots: true,

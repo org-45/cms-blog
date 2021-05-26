@@ -9,7 +9,7 @@ import {
 } from "./DropDowns";
 import { useState } from "react";
 
-import useWindowDimensions from "../../utility/screenSize";
+import useWindowDimensions from "/screenSize";
 
 export default function Nanbar() {
   const { height, width } = useWindowDimensions();
