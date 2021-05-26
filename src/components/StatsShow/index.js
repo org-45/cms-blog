@@ -9,6 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function StatsShow() {
+  return <LStats />;
+}
+
+const LStats = () => {
   return (
     <div className="grid grid-cols-5 justify-center items-center bg-gray-900 text-5xl text-white h-30vh">
       <div className="grid justify-center items-center">
@@ -85,4 +89,4 @@ export default function StatsShow() {
       </div>
     </div>
   );
-}
+};
