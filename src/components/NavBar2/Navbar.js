@@ -73,7 +73,7 @@ const MNav = () => {
           <CommunityDropDown />
         </div>
 
-        <div className="flex flex-row text-white font-mono text-xl font-light p-5 w-1/4 space-x-4">
+        <div className="flex flex-row text-white font-mono text-xl font-light p-5 w-2/4 space-x-4">
           <button className="border-4 border-green-500 hover:border-yellow-500 p-1 rounded-3xl transform motion-safe:hover:scale-110">
             Try Betanet
           </button>
