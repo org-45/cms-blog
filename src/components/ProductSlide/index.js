@@ -231,26 +231,24 @@ function MProductSlide() {
           type="video/mp4"
         ></video>
 
-        <div className="grid justify-center items-center  text-white text-5xl">
-          {" "}
-          Something 1 can be some thing realted to the 0chain Something 1 can be
-          some thing realted to the 0chain
+        <div className="grid justify-center items-center p-5 text-white">
+          <div className=" text-5xl"> Something related to 0chain</div>
+          <div className=""> Something related to 0chain description</div>
         </div>
       </div>
-      <div className="grid grid-cols-2 h-100vh">
-        <div className="grid justify-center items-center  p-20">
-          <video
-            autoPlay
-            loop
-            muted
-            src={elephantsVid}
-            width={800}
-            height={600}
-            type="video/webm"
-          ></video>
-        </div>
-        <div className="grid justify-center items-center   text-5xl">
-          Something 2
+      <div className="grid h-100vh bg-black">
+        <video
+          autoPlay
+          loop
+          muted
+          src={elephantsVid}
+          className="grid border-5 border-black rounded-3xl mt-20"
+          type="video/mp4"
+        ></video>
+
+        <div className="grid justify-center items-center p-5 text-white">
+          <div className=" text-5xl"> Something related to 0chain</div>
+          <div className=""> Something related to 0chain description</div>
         </div>
       </div>
     </div>
