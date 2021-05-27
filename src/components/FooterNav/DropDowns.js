@@ -39,36 +39,35 @@ const Dropdowns = () => {
 
         return (
           <header>
-            <div className="justify-between items-center">
-              <div className="flex flex-row text-white font-mono font-light items-center justify-center  space-x-6">
-                {tagsData.map((tag, index) => {
-                  return (
-                    <Dropdown
-                      overlay={
-                        <div className=" bg-gray-200">
-                          {tag.edges.map((edge, index) => (
-                            <div>
-                              <Link to={`/blog/${edge.node.frontmatter.slug}`}>
-                                {edge.node.frontmatter.title}
-                              </Link>
-                            </div>
-                          ))}
-                        </div>
-                      }
-                      placement="topCenter"
-                      arrow
+            <div className="flex flex-row flex-wrap  text-white font-mono font-light items-center justify-center">
+              {tagsData.map((tag, index) => {
+                return (
+                  <Dropdown
+                    overlay={
+                      <div className=" bg-gray-200 p-5">
+                        {tag.edges.map((edge, index) => (
+                          <div className="m-5">
+                            <Link to={`/blog/${edge.node.frontmatter.slug}`}>
+                              {edge.node.frontmatter.title}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    }
+                    placement="topCenter"
+                    arrow
+                    className="p-3"
+                  >
+                    <button
+                      onClick={(e) => e.preventDefault()}
+                      className="ant-dropdown-link"
                     >
-                      <button
-                        onClick={(e) => e.preventDefault()}
-                        className="ant-dropdown-link"
-                      >
-                        {tag.fieldValue}
-                        <DownOutlined />
-                      </button>
-                    </Dropdown>
-                  );
-                })}
-              </div>
+                      {tag.fieldValue}
+                      <DownOutlined />
+                    </button>
+                  </Dropdown>
+                );
+              })}
             </div>
           </header>
         );

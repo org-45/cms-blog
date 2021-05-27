@@ -3,8 +3,8 @@ import FlipCountdown from "@rumess/react-flip-countdown";
 
 export default function CountDown() {
   return (
-    <div className="flex flex-row justify-center items-center gap-x-10">
-      <div className="flex ">
+    <div className="grid grid-cols-1 justify-center items-center">
+      <div className="grid">
         <FlipCountdown
           endAt={"2022-12-12 01:26:58"} // Date/Time
           size="small"
@@ -18,7 +18,7 @@ export default function CountDown() {
           secondTitle="SS"
         />
       </div>
-      <div className="flex text-xl justify-center items-center">
+      <div className="flex flex-row justify-center items-center">
         {`Left for `} <span className="font-bold m-1">{`ABC`}</span>
         {` release.`}
       </div>
