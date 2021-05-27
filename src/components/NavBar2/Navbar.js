@@ -32,7 +32,7 @@ const MNav = () => {
   return (
     <div
       className={
-        " bg-gray-900 flex flex-col " + (navbarOpen ? "h-60vh" : "h-10vh ")
+        " bg-gray-900 flex flex-col " + (navbarOpen ? "h-70vh" : "h-10vh ")
       }
     >
       <div className="flex flex-row w-full  ">
