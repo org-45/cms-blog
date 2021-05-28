@@ -15,4 +15,45 @@ community_description: ndustry. Lorem Ipsum has been the industry's standard
   Ipsum.
 meta_title: meta title of the Documentation
 meta_description: some of the resource found in the internet
+
+updates:
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
 ---
