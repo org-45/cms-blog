@@ -38,4 +38,45 @@ product_description: product Contrary to popular belief, Lorem Ipsum is not
   dolor sit amet..", comes from a line in section 1.10.32.
 meta_title: title
 meta_description: Sudeep Bhandari
+
+updates:
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
 ---

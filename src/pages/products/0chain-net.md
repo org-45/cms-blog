@@ -9,4 +9,45 @@ product_yt_link: <iframe width="400" height="300" src="https://www.youtube.com/e
 meta_title: 0CHAIN Net | 0Chain Products
 meta_description: >-
   0Chain major blockchain based system like but based on blockchain ensuring security, privacy compliance.
+
+updates:
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
 ---

@@ -125,7 +125,7 @@ const MLandingBlog = (props) => {
       </h3>
       <div className="grid grid-cols-1 items-center justify-center">
         {data.allMediumPost.edges.slice(0, 2).map((edge, index) => (
-          <div className=" p-3  transform hover:scale-110 motion-reduce:transform-none  w-4/5 grid justify-self-center self-center bg-gray-100 border-solid border-4 border-green-100">
+          <div className=" p-3   w-4/5 grid justify-self-center self-center bg-gray-100 border-solid border-4 border-green-100">
             <a
               href={medium_slug + edge.node.slug + "-" + edge.node.medium_id}
               target="_blank"
