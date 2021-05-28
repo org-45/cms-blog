@@ -376,7 +376,7 @@ const MFooter = (props) => {
               <div className=" text-white opacity-50 ">Contact Us</div>
             </Link>
           </div>
-          <div className="flex flex-col items-start h-30vh gap-5 p-2 ">
+          <div className="flex flex-col col-span-2 items-start h-30vh gap-5 p-2 ">
             <button className=" border-2 p-1 rounded-full border-green-500">
               Try Betanet
             </button>
@@ -387,55 +387,55 @@ const MFooter = (props) => {
         </div>
       </div>
       <div className="bg-black h-20vh grid justify-center items-center">
-        <div className="grid grid-cols-5 gap-x-10 gap-y-10">
+        <div className="grid grid-cols-5 gap-x-10 gap-y-5">
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faGithub} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTelegram} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faTelegram} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faYoutube} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faYoutube} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faReddit} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faReddit} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faMedium} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faMedium} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faTwitter} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faFacebook} size="x" color={"#07db7c"} />
           </a>
           <a
             href="https://github.com/0chain"
@@ -444,7 +444,7 @@ const MFooter = (props) => {
           >
             <FontAwesomeIcon
               icon={faStackOverflow}
-              size="2x"
+              size="x"
               color={"#07db7c"}
             />
           </a>
@@ -453,7 +453,7 @@ const MFooter = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="2x" color={"#07db7c"} />
+            <FontAwesomeIcon icon={faLinkedin} size="x" color={"#07db7c"} />
           </a>
         </div>
       </div>

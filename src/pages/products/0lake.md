@@ -18,4 +18,45 @@ meta_title: meta 0lake
 meta_description: "meta me product in long run.0Lake is a product of nice
   choice. We need to make such product in long run.0Lake is a product of nice
   choice. We need to make such "
+
+updates:
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
+
+  - item_topic: This is the topic for the 0box.
+    item_url: https://google.com
+    item_description: Some content about why do we need to make 0box this and with that.
 ---
