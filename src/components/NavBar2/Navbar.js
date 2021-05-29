@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, StaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import SearchBox from "../SearchBox";
 
 import {
   ResourcesDropDown,
@@ -73,10 +74,14 @@ const MNav = () => {
           <CommunityDropDown />
         </div>
 
-        <div className="flex flex-row text-white font-mono text-xl font-light p-5 w-2/4 space-x-4">
-          <button className="border-4 border-green-500 hover:border-yellow-500 p-1 rounded-3xl transform motion-safe:hover:scale-110">
+        <div className="flex flex-row text-white font-mono text-xl font-light p-3 w-2/4">
+          <button className="border-4 border-green-500 p-2 hover:border-yellow-500  rounded-3xl transform motion-safe:hover:scale-110">
             Try Betanet
           </button>
+        </div>
+        <div className=" flex p-3">
+          {" "}
+          <SearchSection />
         </div>
       </div>
     </div>
@@ -88,11 +93,17 @@ const MNav = () => {
 }
 const LNav = () => (
   <div className=" bg-gray-900 flex h-10vh ">
-    <div className="flex w-2/4  justify-center">
+    <div className="flex w-2/5  justify-center">
       <Link to="/">
         <LogoNab />
       </Link>
     </div>
+
+    <div className=" flex justify-center">
+      {" "}
+      <SearchSection />
+    </div>
+
     <div className="flex flex-row   text-white font-mono text-xl font-light items-center justify-center w-1/2 p-5">
       <div className="hover:text-yellow-500 p-3">
         <ResourcesDropDown />
@@ -128,6 +139,21 @@ const LogoNab = () => {
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="0chain logo"
       className="m-3"
+    />
+  );
+};
+
+const SearchSection = () => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SearchIndexQuery {
+          siteSearchIndex {
+            index
+          }
+        }
+      `}
+      render={(data) => <SearchBox searchIndex={data.siteSearchIndex.index} />}
     />
   );
 };

@@ -4,6 +4,7 @@ import config from "../../config";
 import Helmet from "react-helmet";
 import PostCard from "../components/PostCard";
 import Layout from "../components/Layout";
+import SearchBox from "../components/SearchBox";
 
 const PaginationLink = (props) => {
   if (!props.test) {

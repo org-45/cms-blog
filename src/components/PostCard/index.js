@@ -27,17 +27,17 @@ const MPostCard = ({ posts }) => (
           className="grid grid-cols-1 border h-auto w-full rounded-3 m-5"
         >
           <div className="h-30vh grid justify-center items-center ">
-            {post.frontmatter.cover.childImageSharp ? (
-              <ProgressiveImageContainer
-                image={post.frontmatter.cover}
-                alt={post.frontmatter.title}
-              />
-            ) : (
+            {post.frontmatter.cover.childImageSharp === null ? (
               <img
                 src={post.frontmatter.cover.publicURL}
                 alt={post.frontmatter.title}
-                height="150px"
-                width="300px"
+                max-height="150px"
+                width="100%"
+              />
+            ) : (
+              <ProgressiveImageContainer
+                image={post.frontmatter.cover}
+                alt={post.frontmatter.title}
               />
             )}
           </div>
@@ -79,17 +79,17 @@ const LPostCard = ({ posts }) => (
         >
           <section className="p-2 grid border h-60vh  rounded-3 m-10">
             <div className="h-30vh grid justify-center items-center ">
-              {post.frontmatter.cover.childImageSharp ? (
-                <ProgressiveImageContainer
-                  image={post.frontmatter.cover}
-                  alt={post.frontmatter.title}
-                />
-              ) : (
+              {post.frontmatter.cover.childImageSharp === null ? (
                 <img
                   src={post.frontmatter.cover.publicURL}
                   alt={post.frontmatter.title}
-                  height="150px"
-                  width="300px"
+                  max-height="150px"
+                  width="100%"
+                />
+              ) : (
+                <ProgressiveImageContainer
+                  image={post.frontmatter.cover}
+                  alt={post.frontmatter.title}
                 />
               )}
             </div>
