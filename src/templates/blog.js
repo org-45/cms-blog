@@ -56,7 +56,7 @@ const BlogPage = (props) => {
         </h1>
       </div>
 
-      <section className="px-60">
+      <section className="">
         <PostCard posts={group} />
         <section className="p-10">
           <div className="buttons is-centered">

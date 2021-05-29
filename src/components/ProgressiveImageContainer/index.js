@@ -9,7 +9,8 @@ const ProgressiveImageContainer = ({ image, alt, className }) =>
     <GatsbyImage
       image={_.get(image, ["childImageSharp", "fluid"])}
       className={className}
-      alt={alt} />
+      alt={alt}
+    />
   ) : (
     <img
       className={className}
