@@ -11,13 +11,15 @@ import {
 import { useState } from "react";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 export default function Nanbar() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   return (
     <div>
-      <header>{width > 1300 ? <LNav /> : <MNav />}</header>
+      <header>{isMobile || width < 1300 ? <MNav /> : <LNav />}</header>
     </div>
   );
 }

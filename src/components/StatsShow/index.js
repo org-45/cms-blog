@@ -9,11 +9,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import useWindowSize from "/screenSize";
+import { useDeviceDetect } from "/screenSize.js";
 
 export default function StatsShow() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
-  return width > 1300 ? <LStats /> : <MStats />;
+  return !isMobile || width > 1300 ? <LStats /> : <MStats />;
 }
 
 const LStats = () => {

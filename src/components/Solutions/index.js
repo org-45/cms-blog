@@ -3,6 +3,7 @@ import React from "react";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 //blockchain
 import BlockChainSolution from "/static/img/gfx/blockchain_integration.png";
@@ -36,6 +37,7 @@ import SCS3 from "/static/img/gfx/msp/blockchain/0chain Icons_prevent-fraud.svg"
 
 const Solutions = () => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   return (
     <div className="grid justify-center w-full ">

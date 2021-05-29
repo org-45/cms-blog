@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const ResourcePageTemplate = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const { resource } = props;
 
@@ -42,7 +44,7 @@ const ResourcePageTemplate = (props) => {
         <p className=" grid text-xl text-center">{meta_description}</p>
       </div>
       {/* SHORT INTRO  */}
-      {width > 1300 ? (
+      {width > 1300 || !isMobile ? (
         <div className="grid grid-cols-12 h-50vh">
           <div className="col-span-9  grid justify-center items-center border rounded m-10 p-20">
             {reso.description}

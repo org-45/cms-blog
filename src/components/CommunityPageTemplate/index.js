@@ -6,8 +6,11 @@ import PropTypes from "prop-types";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
+
 const CommunityPageTemplate = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const { community } = props;
 
@@ -45,7 +48,7 @@ const CommunityPageTemplate = (props) => {
       </div>
       {/* SHORT INTRO  */}
 
-      {width > 1300 ? (
+      {width > 1300 || !isMobile ? (
         <div className="grid grid-cols-12 h-50vh">
           <div className="col-span-9  grid justify-center items-center border rounded m-10 p-20">
             {reso.description}

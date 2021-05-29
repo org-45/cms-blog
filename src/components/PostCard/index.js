@@ -2,15 +2,17 @@ import React from "react";
 import { Link } from "gatsby";
 import ProgressiveImageContainer from "../../components/ProgressiveImageContainer";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const PostCard = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const { posts } = props;
 
   console.log(posts, "this is our posts");
 
-  return width > 1300 ? (
+  return width > 1300 || !isMobile ? (
     <LPostCard posts={posts} />
   ) : (
     <MPostCard posts={posts} />

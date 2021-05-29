@@ -7,6 +7,7 @@ import { Carousel } from "antd";
 import zchainLooper from "../../assets/videos/0chain_looper.mp4";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 var settings = {
   dots: true,
@@ -19,6 +20,7 @@ var settings = {
 
 const Win = ({ carouselData }) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   console.log(carouselData, "this is our carousel data");
 
@@ -35,7 +37,7 @@ const Win = ({ carouselData }) => {
         {...settings}
       >
         {carouselData.offerings.map((data, index) => {
-          return width > 1300 ? (
+          return !isMobile || width > 1300 ? (
             <CustomLSlide key={index} cData={data} />
           ) : (
             <CustomMSlide key={index} cData={data} />

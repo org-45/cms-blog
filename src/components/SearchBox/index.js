@@ -3,9 +3,11 @@ import { Link } from "gatsby";
 import { Index } from "elasticlunr";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const SearchBox = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   let index = null;
 
@@ -30,7 +32,7 @@ const SearchBox = (props) => {
     );
   };
 
-  return width > 1300 ? (
+  return width > 1300 || !isMobile ? (
     <div className={`navbar-item ${active ? "is-active" : ""}`}>
       <input
         className="input navbar-link is-rounded is-primary"

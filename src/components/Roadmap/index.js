@@ -4,6 +4,7 @@ import CountDown from "../CountDown";
 import ZChainWhitePaper from "../../assets/images/white-papers/0chain_white_paper.png";
 import { Link } from "gatsby";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const VALUES = [
   "2017-08-4",
@@ -32,8 +33,9 @@ const VALUES = [
 
 export default function Roadmap() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
-  return <div>{width > 1300 ? <LRoadmap /> : <MRoadmap />}</div>;
+  return <div>{width > 1300 || !isMobile ? <LRoadmap /> : <MRoadmap />}</div>;
 }
 
 const LRoadmap = () => {
