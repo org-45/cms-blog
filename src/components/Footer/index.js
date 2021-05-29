@@ -18,9 +18,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const Footer = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const { copyright } = props;
 
@@ -28,7 +30,7 @@ const Footer = (props) => {
     alert("Do you really want to submit?");
   };
 
-  return width > 1300 ? (
+  return width > 1300 || !isMobile ? (
     <LFooter copyright={copyright} />
   ) : (
     <MFooter copyright={copyright} />

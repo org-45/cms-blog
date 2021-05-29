@@ -7,11 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 export default function Team() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
-  return width > 1300 ? <LTeam /> : <MTeam />;
+  return width > 1300 || !isMobile ? <LTeam /> : <MTeam />;
 }
 
 const LTeam = () => {

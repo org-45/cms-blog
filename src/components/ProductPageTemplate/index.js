@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 const ProductPageTemplate = (props) => {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const { product } = props;
 
@@ -39,7 +41,7 @@ const ProductPageTemplate = (props) => {
         <h1 className=" grid pt-20 text-4xl text-white justify-center items-center">
           {prod.heading}
         </h1>
-        {width > 1300 ? (
+        {width > 1300 || !isMobile ? (
           <p className=" grid text-xl text-center px-60">{meta_description}</p>
         ) : (
           <p className=" grid text-xl text-center p-10">{meta_description}</p>

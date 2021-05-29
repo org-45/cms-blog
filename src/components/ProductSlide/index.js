@@ -2,8 +2,8 @@ import React from "react";
 // videos and pngs
 import gitPng from "../../assets/images/gh-mobile.png";
 import gitVideo from "../../assets/videos/gh-mobile.h264.mp4";
-
 import zchainLooper from "../../assets/videos/0chain_looper.mp4";
+
 import elephantsVid from "../../assets/videos/elephants-dream.webm";
 import sampleVideo from "../../assets/videos/github-2.mp4";
 
@@ -12,13 +12,17 @@ import { Link } from "gatsby";
 import Solutions from "../Solutions";
 
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 export default function ProductSlide() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   return (
     <div>
-      <header>{width > 1300 ? <LProductSlide /> : <MProductSlide />}</header>
+      <header>
+        {width > 1300 || !isMobile ? <LProductSlide /> : <MProductSlide />}
+      </header>
     </div>
   );
 }

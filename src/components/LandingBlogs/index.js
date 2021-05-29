@@ -1,9 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import useWindowSize from "/screenSize.js";
+import { useDeviceDetect } from "/screenSize.js";
 
 export default function LandingBlogs() {
   const { width } = useWindowSize();
+  const { isMobile } = useDeviceDetect();
 
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -41,7 +43,7 @@ export default function LandingBlogs() {
   const medium_cdn_m = "https://cdn-images-1.medium.com/max/200/";
   const medium_slug = "https://medium.com/0chain/";
 
-  return width > 1300 ? (
+  return width > 1300 || !isMobile ? (
     <LLandingBlog medium_cdn={medium_cdn} medium_slug={medium_slug} d={data} />
   ) : (
     <MLandingBlog

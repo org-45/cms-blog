@@ -4,6 +4,7 @@ import config from "../../config";
 import Helmet from "react-helmet";
 import PostCard from "../components/PostCard";
 import Layout from "../components/Layout";
+import SearchBox from "../components/SearchBox";
 
 const PaginationLink = (props) => {
   if (!props.test) {
@@ -56,7 +57,7 @@ const BlogPage = (props) => {
         </h1>
       </div>
 
-      <section className="px-60">
+      <section className="">
         <PostCard posts={group} />
         <section className="p-10">
           <div className="buttons is-centered">

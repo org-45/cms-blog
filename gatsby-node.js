@@ -61,7 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
               cover {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 250
+                    width: 240
                     quality: 80
                     placeholder: BLURRED
                     layout: CONSTRAINED
