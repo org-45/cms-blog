@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "0chain blockchain based storage", // Site title.
   siteTitleAlt: "0chain", // Alternative site title for SEO.
   siteLogo: "/icons/icon-512x512.png", // Logo used for SEO and manifest.
-  siteUrl: "https://peaceful-liskov-0d1d7a.netlify.app/", // Domain of your website without pathPrefix.
+  siteUrl: "https://test0chain.netlify.app/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: "0chain block storage backed with ZCN website", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml",
