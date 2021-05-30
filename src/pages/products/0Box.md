@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 title: 0Box
-cover: /img/mining.svg
+cover: /img/gfx/0box.png
 date: 2021-05-01T07:32:52.974Z
 product_description: 0Box is dropbox like but based on blockchain ensuring security, privacy compliance. 0Box is dropbox like but based on blockchain ensuring security, privacy compliance.0Box is dropbox like but based on blockchain ensuring security, privacy compliance.0Box is dropbox like but based on blockchain ensuring security, privacy compliance.0Box is dropbox like but based on blockchain ensuring security, privacy compliance.0Box is dropbox like but based on blockchain ensuring security, privacy compliance.0Box is dropbox like but based on blockchain ensuring security, privacy compliance.
 product_yt_thumbnail: /img/tutorials.png

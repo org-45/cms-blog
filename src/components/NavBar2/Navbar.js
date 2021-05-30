@@ -8,6 +8,7 @@ import {
   ProductsDropDown,
   CommunityDropDown,
 } from "./DropDowns";
+
 import { useState } from "react";
 
 import useWindowSize from "/screenSize.js";

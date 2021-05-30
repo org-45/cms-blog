@@ -20,6 +20,7 @@ const ProductPageTemplate = (props) => {
     product_yt_link,
     product_yt_thumbnail,
     title,
+    cover,
   } = product;
 
   let prod = {};
@@ -37,8 +38,16 @@ const ProductPageTemplate = (props) => {
       </Helmet>
 
       {/* BANNER */}
-      <div className="bg-black h-40vh grid grid-cols-1 text-white justify-center items-center">
-        <h1 className=" grid pt-20 text-4xl text-white justify-center items-center">
+      <div
+        style={{
+          backgroundImage: `url( ${cover.publicURL})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="filter grayscale opacity h-40vh grid grid-cols-1 text-white font-black justify-center items-center"
+      >
+        <h1 className=" grid pt-20 text-4xl  justify-center items-center">
           {prod.heading}
         </h1>
         {width > 1300 || !isMobile ? (
