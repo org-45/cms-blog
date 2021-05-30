@@ -6,7 +6,12 @@ import { Link } from "gatsby";
 import useWindowSize from "/screenSize.js";
 
 //logo
-import ZBox from "./0box_black.svg";
+
+import ZBoxSVG from "/static/img/0box/0box-black-old-icon.svg";
+import ZChainSVG from "/static/img/0chain-net/0chainNet/Zchain-net-text-black.svg";
+import ZStor from "/static/img/0stor/0store/0stor-text-black.svg";
+import ZWallet from "/static/img/0wallet/0wallet_black.svg";
+import ZLake from "/static/img/0Lake/0Lake Logo.svg";
 
 const { SubMenu } = Menu;
 
@@ -324,8 +329,12 @@ export const ResourcesDropDown = () => {
   );
 };
 
-const Logo = ({ main_logo }) => {
-  return <img src={ZBox} alt="some logo" height="100px" />;
+{
+  /* "https://0chain.net/images/gfx/wallet.svg" */
+}
+
+const Logo = ({ logoData }) => {
+  return <img src={logoData} width="200px" height="200px" />;
 };
 
 //PRODUCTSS
@@ -340,11 +349,11 @@ const LProduct = () => {
           >
             {
               {
-                "0Box": <Logo />,
-                "0Chain-net": <Logo />,
-                "0Stor": <Logo />,
-                "0Wallet": <Logo />,
-                "0Lake": <Logo />,
+                "0Box": <Logo logoData={ZBoxSVG} />,
+                "0Chain-net": <Logo logoData={ZChainSVG} />,
+                "0Stor": <Logo logoData={ZStor} />,
+                "0Wallet": <Logo logoData={ZWallet} />,
+                "0Lake": <Logo logoData={ZLake} />,
               }[item.name]
             }
           </Link>
