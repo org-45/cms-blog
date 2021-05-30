@@ -1,6 +1,8 @@
 ---
 templateKey: product-page
 title: 0Chain Net
+banner_title: abc
+banner_info: abc cdf
 cover: /img/mining.svg
 date: 2021-05-04T07:32:52.974Z
 product_description: 0chain net is dropbox like but based on blockchain ensuring security, privacy compliance.

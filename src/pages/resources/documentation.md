@@ -2,7 +2,7 @@
 templateKey: resource-page
 title: Documentation
 date: 2021-05-13T08:17:49.725Z
-cover: /img/coffee-gear.png
+cover: /img/bg/zcn-inflation.jpg
 resource_yt_link: https://youtube.com/#
 resource_yt_thumbnail: /img/coffee-gear.png
 resource_description: ndustry. Lorem Ipsum has been the industry's standard

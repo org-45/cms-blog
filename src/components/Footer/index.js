@@ -157,6 +157,7 @@ const LFooter = (props) => {
               <div className=" text-white opacity-50 ">Contact Us</div>
             </Link>
           </div>
+
           <div className="flex flex-col items-start h-25vh gap-4 ">
             <button className=" border-2 p-1 rounded-full border-green-500">
               Try Betanet

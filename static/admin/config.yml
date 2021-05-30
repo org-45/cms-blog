@@ -184,6 +184,9 @@ collections:
           default: "product-page",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Banner Title", name: "banner_title", widget: "string" }
+      - { label: "Banner Info", name: "banner_info", widget: "string" }
+
       - { label: "Date", name: "date", widget: "datetime" }
 
       - { label: "Cover", name: "cover", widget: "image" }

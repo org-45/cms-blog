@@ -2,7 +2,7 @@
 templateKey: resource-page
 title: Github
 date: 2021-05-13T08:22:06.188Z
-cover: /img/products-grid3.jpg
+cover: /img/bg/zcn-inflation.jpg
 resource_yt_link: https://github.com
 resource_yt_thumbnail: /img/products-grid3.jpg
 resource_description: ndustry. Lorem Ipsum has been the industry's standard

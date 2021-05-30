@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import useWindowSize from "/screenSize.js";
 import { useDeviceDetect } from "/screenSize.js";
 
@@ -20,6 +21,7 @@ const ResourcePageTemplate = (props) => {
     resource_yt_link,
     resource_yt_thumbnail,
     title,
+    cover,
   } = resource;
 
   let reso = {};
@@ -37,7 +39,15 @@ const ResourcePageTemplate = (props) => {
       </Helmet>
 
       {/* BANNER */}
-      <div className="bg-gray-900 h-40vh grid grid-cols-1 text-white justify-center items-center">
+      <div
+        style={{
+          backgroundImage: `url( ${cover.publicURL})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className=" bg-fixed h-40vh grid grid-cols-1 text-white justify-center items-center"
+      >
         <h1 className=" grid pt-20 text-4xl text-white justify-center items-center">
           {reso.heading}
         </h1>
@@ -86,6 +96,7 @@ const ResourcePageTemplate = (props) => {
 };
 ResourcePageTemplate.propTypes = {
   title: PropTypes.string,
+  cover: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   reso: PropTypes.shape({
