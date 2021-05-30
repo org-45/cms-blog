@@ -439,6 +439,8 @@ export const ZChainNetPageQuery = graphql`
         node {
           frontmatter {
             title
+            banner_info
+            banner_title
             templateKey
             product_description
             product_yt_link

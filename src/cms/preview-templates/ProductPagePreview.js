@@ -13,6 +13,8 @@ const ProductPreview = ({ entry, widgetFor }) => {
             meta_title={entry.getIn(["data", "meta_title"])}
             meta_desc={entry.getIn(["data", "meta_description"])}
             title={entry.getIn(["data", "title"])}
+            banner_info={entry.getIn(["data", "banner_info"])}
+            banner_title={entry.getIn(["data", "banner_title"])}
             product={{
               product_description: entry.getIn([
                 "data",

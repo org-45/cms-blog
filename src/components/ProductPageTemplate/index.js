@@ -20,6 +20,8 @@ const ProductPageTemplate = (props) => {
     product_yt_link,
     product_yt_thumbnail,
     title,
+    banner_title,
+    banner_info,
     cover,
   } = product;
 
@@ -48,12 +50,12 @@ const ProductPageTemplate = (props) => {
         className="filter grayscale opacity h-40vh grid grid-cols-1 text-white font-black justify-center items-center"
       >
         <h1 className=" grid pt-20 text-4xl  justify-center items-center">
-          {prod.heading}
+          {}
         </h1>
         {width > 1300 || !isMobile ? (
-          <p className=" grid text-xl text-center px-60">{meta_description}</p>
+          <p className=" grid text-xl text-center px-60">{}</p>
         ) : (
-          <p className=" grid text-xl text-center p-10">{meta_description}</p>
+          <p className=" grid text-xl text-center p-10">{}</p>
         )}
       </div>
       {/* SHORT INTRO  */}
@@ -99,6 +101,8 @@ const ProductPageTemplate = (props) => {
 };
 ProductPageTemplate.propTypes = {
   title: PropTypes.string,
+  banner_title: PropTypes.string,
+  banner_info: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   prod: PropTypes.shape({
