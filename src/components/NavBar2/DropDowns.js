@@ -5,6 +5,9 @@ import { DownOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
 import useWindowSize from "/screenSize.js";
 
+//logo
+import ZBox from "./0box_black.svg";
+
 const { SubMenu } = Menu;
 
 const dropDown = {
@@ -253,52 +256,48 @@ const LMenu = () => {
     <div className="grid grid-cols-12 bg-gray-50 h-60vh w-screen">
       {dropDown.resources.map((item, index) =>
         item.name === "WhitePapers" ? (
-          <div className="p-10 grid col-span-4 ">
-            <Link to={item.page}>
-              <div className="text-black grid underline text-5xl font-black flex content-center justify-center p-5">
-                {item.name}{" "}
-              </div>
+          <div className=" grid col-span-4 p-10">
+            <Link
+              to={item.page}
+              className="text-black grid underline text-5xl h-10vh font-black flex content-center justify-center p-5"
+            >
+              {item.name}{" "}
             </Link>
 
-            <div className=" grid  justify-center">
+            <div className=" flex flex-col items-center h-40vh">
               {item.subItems.map((sItem, sIndex) => (
-                <div className="m-1 text-lg">
-                  <div className=" ">
-                    <a
-                      href={sItem.src}
-                      // target="_blank"
-                      // rel="noopener noreferrer"
-                      style={{ color: "gray" }}
-                    >
-                      <div className=" mx-3 px-1 ">{sItem.sName}</div>
-                    </a>
-                  </div>
+                <div className="m-1">
+                  <a
+                    href={sItem.src}
+                    // target="_blank"
+                    // rel="noopener noreferrer"
+                    style={{ color: "gray" }}
+                    className="  "
+                  >
+                    {sItem.sName}
+                  </a>
                 </div>
               ))}
             </div>
           </div>
         ) : (
           <div className="p-10 grid col-span-4 justify-center ">
-            <Link to={item.page}>
-              <div className="text-black grid underline text-5xl font-black flex content-center justify-center p-5">
-                {item.name}{" "}
-              </div>
+            <Link
+              to={item.page}
+              className="text-black grid underline text-5xl h-10vh font-black flex content-center justify-center p-5"
+            >
+              {item.name}{" "}
             </Link>
 
-            <div className=" grid grid-cols-2 justify-center h-full  justify-self-start h-40vh">
+            <div className=" flex flex-col items-center h-40vh   ">
               {item.subItems.map((sItem, sIndex) => (
-                <div className="m-1 text-lg">
-                  <div className=" ">
-                    <a
-                      href={sItem.src}
-                      // target="_blank"
-                      // rel="noopener noreferrer"
-                      style={{ color: "gray" }}
-                    >
-                      <div className=" mx-3 px-1 ">{sItem.sName}</div>
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href={sItem.src}
+                  style={{ color: "gray" }}
+                  className=" mx-3 px-1  flex"
+                >
+                  {sItem.sName}
+                </a>
               ))}
             </div>
           </div>
@@ -325,19 +324,32 @@ export const ResourcesDropDown = () => {
   );
 };
 
+const Logo = ({ main_logo }) => {
+  return <img src={ZBox} alt="some logo" height="100px" />;
+};
+
 //PRODUCTSS
 const LProduct = () => {
   return (
-    <div className="grid grid-cols-10 bg-gray-50 h-70vh">
+    <div className="grid grid-cols-10 bg-gray-50 h-50vh">
       {dropDown.products.map((item, index) => (
-        <div className="grid col-span-2 justify-center items-center p-10">
-          <Link to={item.page}>
-            <div className="text-black m-2 justify-center items-center grid underline text-5xl font-black">
-              {item.name}{" "}
-            </div>
+        <div className="grid col-span-2 justify-center items-center p-5">
+          <Link
+            to={item.page}
+            className="text-black grid underline text-5xl h-10vh font-black flex content-center justify-center p-5"
+          >
+            {
+              {
+                "0Box": <Logo />,
+                "0Chain-net": <Logo />,
+                "0Stor": <Logo />,
+                "0Wallet": <Logo />,
+                "0Lake": <Logo />,
+              }[item.name]
+            }
           </Link>
 
-          <div className="grid justify-center items-center">
+          <div className="grid justify-center items-center h-10vh">
             shoret a siudais iausdbi uiuasbd asidsai ui iashd shoret a siudais
             iausdbi uiuasbd asidsai ui iashd shoret a siudais iausdbi uiuasbd
             asidsai ui iashd shoret a siudais iausdbi uiuasbd asidsai ui iashd{" "}
