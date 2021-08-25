@@ -1,7 +1,7 @@
 # 0chain.net remake
 
 
-Check site here : https://0chaintest.netlify.app
+Check site here : https://test0chain.netlify.app
 
 
 # CMS
