@@ -1,12 +1,12 @@
 import React from "react";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import CommunityPageTemplate from "../../components/CommunityPageTemplate";
 
 const DeveloperProgramPage = ({ data }) => {
-  console.log(data, "data");
+  // console.log(data, "data");
 
   const title = data.site.siteMetadata.title;
   const DeveloperProgramData = data.allMarkdownRemark.edges[0].node.frontmatter;

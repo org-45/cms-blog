@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import useWindowSize from "/screenSize.js";
 import { useDeviceDetect } from "/screenSize.js";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import ProductPageTemplate from "../../components/ProductPageTemplate";
 
@@ -27,7 +27,7 @@ import Transparency from "/static/img/0box/transparency.png";
 const ZBoxPage = ({ data }) => {
   const { width } = useWindowSize();
 
-  const title = data.site.siteMetadata.title;
+  // const title = data.site.siteMetadata.title;
   const ZBoxData = data.allMarkdownRemark.edges[0].node.frontmatter;
   const ZBoxUpd = data.allMarkdownRemark.edges[0].node.frontmatter.updates.slice(
     0,

@@ -3,9 +3,9 @@ import React from "react";
 import Saswata from "/static/img/team/a.jpg";
 import Austin from "/static/img/team/b.jpg";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import useWindowSize from "/screenSize.js";
 import { useDeviceDetect } from "/screenSize.js";
 
@@ -35,7 +35,7 @@ const LTeam = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Saswata} style={{ height: "20vh" }} />
+              <img alt="saswata" src={Saswata} style={{ height: "20vh" }} />
             </a>
           </div>
           <div className="text-center text-xl font-bold ">Saswata Basu</div>
@@ -48,7 +48,7 @@ const LTeam = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Austin} style={{ height: "20vh" }} />
+              <img alt="austin" src={Austin} style={{ height: "20vh" }} />
             </a>
           </div>
           <div className="text-center text-xl font-bold ">Thomas Austin</div>
@@ -81,7 +81,7 @@ const MTeam = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Saswata} />
+              <img alt="saswata" src={Saswata} />
             </a>
           </div>
           <div className="text-center text-xl font-bold ">Saswata Basu</div>
@@ -94,7 +94,8 @@ const MTeam = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Austin} />
+              <img alt="austin" src={Austin} />
+              <img alt="austin" src={Austin} />
             </a>
           </div>
           <div className="text-center text-xl font-bold ">Thomas Austin</div>
