@@ -3,7 +3,7 @@ import React from "react";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import useWindowSize from "/screenSize.js";
-import { useDeviceDetect } from "/screenSize.js";
+// import { useDeviceDetect } from "/screenSize.js";
 
 //blockchain
 import BlockChainSolution from "/static/img/gfx/blockchain_integration.png";
@@ -37,7 +37,7 @@ import SCS3 from "/static/img/gfx/msp/blockchain/0chain Icons_prevent-fraud.svg"
 
 const Solutions = () => {
   const { width } = useWindowSize();
-  const { isMobile } = useDeviceDetect();
+  // const { isMobile } = useDeviceDetect();
 
   return (
     <div className="grid justify-center w-full ">
@@ -107,7 +107,7 @@ export const LBlockChain = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img src={BlockChainSolution} alt="block chain image" />
+        <img src={BlockChainSolution} alt="block chain" />
       </div>
     </div>
   );
@@ -118,7 +118,7 @@ export const MBlockChain = () => {
   return (
     <div className="bg-gray-100 w-screen h-70vh grid grid-cols-1 text-black">
       <div className=" bg-gray-100  ">
-        <img src={BlockChainSolution} alt="block chain image" />
+        <img src={BlockChainSolution} alt="block chain " />
       </div>
       <div className="grid bg-gray-100 justify-center items-center ">
         <div className="bg-green-100 justify-center items-center  grid grid-cols-4">
@@ -196,7 +196,7 @@ export const SocialMedia = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img src={SocialMediaSolution} alt="block chain image" />
+        <img src={SocialMediaSolution} alt="block chain" />
       </div>
     </div>
   );
@@ -241,7 +241,7 @@ export const Financials = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img src={FinancialSolution} alt="block chain image" />
+        <img src={FinancialSolution} alt="block chain" />
       </div>
     </div>
   );
@@ -286,11 +286,7 @@ export const HealthCare = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img
-          src={HealthCareSolution}
-          alt="block chain image"
-          className=" h-70vh"
-        />
+        <img src={HealthCareSolution} alt="block chain" className=" h-70vh" />
       </div>
     </div>
   );
@@ -331,7 +327,7 @@ export const SupplyChain = () => {
         </div>
       </div>
       <div className="col-span-2 bg-gray-100 justify-self-center items-self-center">
-        <img src={SupplyChainSolution} alt="block chain image" />
+        <img src={SupplyChainSolution} alt="block chain " />
       </div>
     </div>
   );

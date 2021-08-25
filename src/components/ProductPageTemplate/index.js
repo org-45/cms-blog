@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 import PropTypes from "prop-types";
 
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import useWindowSize from "/screenSize.js";
 import { useDeviceDetect } from "/screenSize.js";
 
@@ -20,8 +20,8 @@ const ProductPageTemplate = (props) => {
     product_yt_link,
     product_yt_thumbnail,
     title,
-    banner_title,
-    banner_info,
+    // banner_title,
+    // banner_info,
     cover,
   } = product;
 

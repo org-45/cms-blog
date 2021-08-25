@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 import PropTypes from "prop-types";
 
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import useWindowSize from "/screenSize.js";
 import { useDeviceDetect } from "/screenSize.js";

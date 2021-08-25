@@ -68,7 +68,7 @@ const LRoadmap = () => {
             linePadding={70}
             labelWidth={100}
             getLabel={function (date) {
-              console.log(date.slice(5, 7), "unsliced");
+              // console.log(date.slice(5, 7), "unsliced");
 
               switch (date.slice(5, 7)) {
                 case "01":
@@ -91,6 +91,7 @@ const LRoadmap = () => {
                 case "12": {
                   return date.slice(0, 4) + " Q4";
                 }
+                default:
               }
             }}
             styles={{
@@ -199,6 +200,7 @@ const MRoadmap = () => {
                 case "12": {
                   return date.slice(0, 4) + " Q4";
                 }
+                default:
               }
             }}
             styles={{
@@ -334,7 +336,11 @@ const InnerTimeline17Q4 = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={ZChainWhitePaper} style={{ height: "30vh" }} />
+            <img
+              src={ZChainWhitePaper}
+              style={{ height: "30vh" }}
+              alt="whitepaper"
+            />
           </a>
         </div>
       </div>

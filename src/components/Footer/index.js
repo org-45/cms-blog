@@ -26,9 +26,9 @@ const Footer = (props) => {
 
   const { copyright } = props;
 
-  const handleFormSubmit = () => {
-    alert("Do you really want to submit?");
-  };
+  // const handleFormSubmit = () => {
+  //   alert("Do you really want to submit?");
+  // };
 
   return width > 1300 || !isMobile ? (
     <LFooter copyright={copyright} />

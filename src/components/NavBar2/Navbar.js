@@ -45,13 +45,11 @@ const MNav = () => {
             <LogoNab />
           </Link>
         </div>
-        <div className="flex justify-end place-items-end w-full items-center">
-          <div
-            className="bg-blue-100 cursor-pointer border-2 hover:border-yellow-500 mx-10"
-            onClick={handleToggle}
-          >
-            {"="}
-          </div>
+        <div
+          className="bg-blue-100 cursor-pointer border-2 hover:border-yellow-500 mx-10 flex justify-end place-items-end w-full items-center"
+          onClick={handleToggle}
+        >
+          {"="}
         </div>
       </div>
       <div
@@ -91,9 +89,8 @@ const MNav = () => {
   );
 };
 
-{
-  /* width > 1300 */
-}
+/* width > 1300 */
+
 const LNav = () => (
   <div className=" bg-gray-900 flex h-10vh ">
     <div className="flex w-2/5  justify-center">

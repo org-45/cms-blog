@@ -1,7 +1,7 @@
 import React from "react";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import ProductPageTemplate from "../../components/ProductPageTemplate";
 import useWindowSize from "/screenSize.js";
@@ -11,17 +11,17 @@ import "react-tabs/style/react-tabs.css";
 
 /* 0box images */
 import ZChainNetLogo from "/static/img/0chain-net/0chainNet/0chain-black-icon.svg";
-import GPlay from "/static/img/logo/google-play-badge.png";
-import APlay from "/static/img/logo/appstore-black.svg";
+// import GPlay from "/static/img/logo/google-play-badge.png";
+// import APlay from "/static/img/logo/appstore-black.svg";
 import Anon from "/static/img/0box/anonymous.png";
 import AbsPri from "/static/img/0box/absolute-privacy.png";
 import TraspData from "/static/img/0box/transparent-data-protection.png";
 import PSharing from "/static/img/0stor/features/0stor_private-data-sharing.svg";
-import AllocDet from "/static/img/0box/Allocation-Details.png";
+// import AllocDet from "/static/img/0box/Allocation-Details.png";
 
-import EnjAnon from "/static/img/0box/File.png";
+// import EnjAnon from "/static/img/0box/File.png";
 
-import Transparency from "/static/img/0box/transparency.png";
+// import Transparency from "/static/img/0box/transparency.png";
 
 const ZChainNetPage = ({ data }) => {
   const { width } = useWindowSize();
