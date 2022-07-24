@@ -1,30 +1,29 @@
 ---
 templateKey: home-page
-title: 0chain Network
-heading: Blockchain based storage platform backed with ZCN
-description: World's most advanced blockchain and decentralized storage platform. Use 0Chain for high security, privacy leadership, and reduced liability.
+title: "0chain Network "
+heading: Blockchain based storage platform backed with ZCN and some more other
+  things here
+description: World's most advanced blockchain and decentralized storage
+  platform. Use 0Chain for high security, privacy leadership, and reduced
+  liability.
 offerings:
   blurbs:
     - image: /img/0box/0box_hero.png
       text: Your private cloud. No logins, emails required. Free 2GB.
       title: 0Box
-
     - image: /img/gfx/permissionless.svg
-      text: Unlike stable coins, ZCN value is based on stored data, speculative demand, and locked/staked tokens.
+      text: Unlike stable coins, ZCN value is based on stored data, speculative
+        demand, and locked/staked tokens.
       title: ZCN
-
     - image: /img/gfx/cloud.svg
       text: Data Privacy, Localization, & High-Security Platform
       title: 0Lake
-
     - image: /img/0wallet/wallet_hero.png
       text: Air-gap security with your mobile and laptop
       title: 0Wallet
-
     - image: /img/rpi.jpeg
       text: Even an embedded device can host 0Chain network.
       title: Meta ZCN
-
 testimonials:
   - author: 0chain
     quote: testimonial 1
@@ -47,7 +46,6 @@ partners_logo_array:
   - partner_logo: /img/partners/oracle.png
   - partner_logo: /img/partners/SVInsight.png
   - partner_logo: /img/partners/tomo_chain.png
-
 meta_title: 0chain | Blockchain based
 meta_description: this is page meta information
 ---
